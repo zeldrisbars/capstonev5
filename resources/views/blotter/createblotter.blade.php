@@ -20,7 +20,6 @@
 	</div>
 	<form action="{{route('createblotter.store')}}" method="post">
 		{{csrf_field()}}
-	{{$blotter =' 1'}}
 	<div class="box-body">
 	<h5><strong>Take Note: </strong>Check details before submit!<br /> <br /></h5>
 	<input type="hidden" name="id" id="id" value="{{count($blotter)}}">
