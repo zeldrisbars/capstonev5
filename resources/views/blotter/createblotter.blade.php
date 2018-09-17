@@ -22,7 +22,11 @@
 		{{csrf_field()}}
 	<div class="box-body">
 	<h5><strong>Take Note: </strong>Check details before submit!<br /> <br /></h5>
-	<input type="hidden" name="id" id="id" value="{{count($finalblotter)}}">
+	@php
+	$no = $blotter + 1;
+	$no++; 
+	@endphp
+	<input type="hidden" name="id" id="id" value="{{$no}}">
 	<div class="form-group">
 	<label for="controlno">Control No.</label>
 	<input type="text" class="form-control" name="controlno" id="controlno" placeholder="Enter Control Number">
