@@ -23,9 +23,7 @@
 
 	<div class="box-body">
 	<h5><strong>Take Note: </strong>Check details before submit!<br /> <br /></h5>
-	@foreach($createblotter as $cr)
-	<input type="hidden" name="id" id="id" value="{{count($cr->id)}}">
-	@endforeach
+	<input type="hidden" name="id" id="id" value="{{count($blotter)}}">
 	<div class="form-group">
 	<label for="controlno">Control No.</label>
 	<input type="text" class="form-control" name="controlno" id="controlno" placeholder="Enter Control Number">
