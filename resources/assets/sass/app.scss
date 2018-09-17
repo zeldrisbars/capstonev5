@@ -1,0 +1,27 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+$fa-font-path: "../fonts/" !default;
+@import "~font-awesome/scss/font-awesome";
+
+//AdminLTE
+@import "~admin-lte/dist/css/AdminLTE.css";
+@import "~admin-lte/dist/css/adminlte.min.css";
+@import "~admin-lte/dist/css/skins/_all-skins.css";
+@import "~admin-lte/plugins/iCheck/square/blue.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~ionicons/dist/css/ionicons.min.css";
+@import "~jvectormap/jquery-jvectormap.css";
