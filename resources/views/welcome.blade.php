@@ -1,179 +1,100 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Brgy. Guyong</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+<head> 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Welcome to Brgy. Guyong</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+	<!----Bootstrap Core CSS -->
+	<link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{{asset('css/landing-page.min.css')}}">
+	<style>
+		header.masthead .overlay
+		{
+		background-image: url('{{ asset('images/Guyong4.png') }}');
+            background-size: cover;
+            background-position:center;
+            opacity: 0.7;
+		}
+		h1
+		{
+			color:#fff432;
+		}
+	</style>
 </head>
-<style>
-   a
-   {
-   	color:white;
-   }
-   .p-md-5
-   {
-   	min-width: 90px;
-   	padding: 3rem !important;
-   }
-  	.rounded
-  	{
-  		border-radius: .25rem !important;
-  	}
-  	.p-3
-  	{
-  		min-width: 40px;
-  	}
-  	.jumbotron
-  	{
-  		border-radius: 0rem;
-  	}
-  	h1,h5
-  	{
-  		color: black;
-      font-family: 'Source Sans Pro', sans-serif;
-  	}
-  	img
-  	{
-  		width: 190px;
-  	}
-  	.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-	}
-	h3
-	{
-		color:white;
-	}
-	.card
-	{
-		background-color: teal;
-		border-color: teal;
-	}
-	.card-img.top
-	{
-		width: 150px;
-	}
-	.card-text,.card-title
-	{
-		color:white;
-	}
-	.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
-.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
-.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
-.col-xl-auto {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.footer {
-   line-height: 60px;
-   background-color:orange;
-   bottom: 0;
-}
-.navbar,.nav,.navbar-brand
-{
-  font-family: 'Source Sans Pro', sans-serif;
-}
-</style>
+
 <body>
-<nav class="navbar navbar-dark bg-orange navbar-fixed-top box-shadow">
-  <a class="navbar-brand" href="#">Brgy. Guyong</a>
-  <!-- Navbar content -->
-  <ul class="nav navbar-nav">
-  	<li pull-right><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
-  </ul>
-</nav>
-<div class="jumbotron bg-white">
-	<img src="{{asset('images/Guyong Logo.png') }}" class="center">
-	<h1 align="center">Welcome to Barangay Guyong!</h1>
-	<h5 align="center">You are welcome here in our website</h5>
-</div>
-<div class = "jumbotron bg-dark">
-<h3 align="center">Announcements</h3>
-<br />	
-<div class="container-fluid">
-<div class="row">
-<div class="col-md-3">
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
+<!--Nav -->
+<nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="">Barangay Guyong</a>
+       	<a class="btn btn-flat btn-warning" href="{{ route('login') }}">Sign In For Barangay Officials</a>
+      </div>
+    </nav>
 
-<div class="col-md-3">
-	<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
+<!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Welcome to Barangay Guyong!</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- Image Showcases -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
 
-<div class="col-md-3">
-	<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{asset('images/Guyong Cover.png')}}');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>About Barangay Guyong</h2>
+            <p class="lead mb-0">Barangay Guyong is one of the twenty-four(24) barangays comprising the municipality of Santa Maria, Bulacan, in the Philippines. It is bordered by Barangay Sta. Clara on the south-west, Poblacion on the south, Balasing and Pulong Buhangin on the east, San Jose Patag in the south-east, Caysio on the north, and Barangay Manggahan and Sta. Cruz on the west.</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('{{asset('images/Guyong 2nd.png')}}');"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Barangay Hall is Fully Operational after May 2018 Barangay Elections</h2>
+            <p class="lead mb-0">Newly Elected Captain of Barangay Guyong, <br/> Mr. Garciano "Kap. Garci" Gravador, reconstructed the Barangay Hall and operations inside. All transactions are operational as of July 2018 as funded of Municipal of Santa Maria. <br />All transactions are transparent between barangay officials and the residents of Barangay Guyong.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Testimonials -->
+    <section class="testimonials text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">What are you looking for?</h2>
+        
+      </div>
+    </section>
 
-<div class="col-md-3">
-	<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-
-
-
-</div>	
-<br />
-<div class="row">
-<div class="col-md-12">
-	<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-<div class="jumbotron">
-<h4>Contact Numbers:</h4>	
-</div>
-<footer class="footer" align="center">
+<!----Footer-->
+<footer class="footer bg-dark">
 <div class="container">
-<p>2018 © PUPSMB Capstone Project</p>
-</div>
-</footer>
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <p class="text-muted small mb-4 mb-lg-0">PUPSMB Capstone Project 2018 © All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+	</footer>
 </body>
+<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 </html>
