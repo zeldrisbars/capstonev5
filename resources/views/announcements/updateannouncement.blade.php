@@ -19,22 +19,27 @@
 			<div class="box-header bg-orange">
 			<div class="box-title">Update Announcements</div>
 		</div>
-		
+		<form action="{{route('updateannouncements.store')}}" method="post">
+			{{csrf_field()}}
+			@php
+			$no = $id;
+			$no++;
+			@endphp
 	<div class="box-body table-responsive">
 		<h5><strong>Take Note: </strong>Check the content that you need to update</h5>
 		<table class= "table">
 			<tbody>
 				<tr>
 					<th>#
-					<td><input type="text" name="">&nbsp&nbsp&nbsp<button type="button" class="btn btn-primary btn-flat btn-xs">Retrieve</button></td>
+					<td><input type="text" name="id" id="id" value="{{$no}}">&nbsp&nbsp&nbsp<button type="button" class="btn btn-primary btn-flat btn-xs">Retrieve</button></td>
 					</th>
 					<th>Title
-						<td><input type="text" name=""></td>
+						<td><input type="text" name="title" id="title"></td>
 					</th>
 				</tr>
 				<tr>
 					<th>Description
-					<td><textarea rows="10" cols="60"></textarea></td>
+					<td><textarea rows="10" cols="60" name="description" id="description"></textarea></td>
 					</th>
 				</tr>
 			</tbody>
@@ -42,13 +47,14 @@
 	</div>
 	<div class="box-footer">
 	<div class="col-md-11">
-	<button type="button" class="btn btn-primary btn-flat btn-sm pull-right">Update</button>
+	<button type="submit" class="btn btn-primary btn-flat btn-sm pull-right">Update</button>
 	</div>
 	<div class="col-md-1">
 	<button type="button" class="btn btn-danger btn-flat btn-sm pull-right">Remove</button>
 	</div>
 	</div>
 	</div>
+</form>
 	</div>
 
 </div>

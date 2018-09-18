@@ -58,6 +58,8 @@
 
 @php
 $no = $blotter;
+$rno = $resident;
+$ano = $announcement;
 @endphp
     <div class="col-md-5">
       <div class="info-box">
@@ -73,8 +75,8 @@ $no = $blotter;
         <span class="info-box-icon bg-yellow"><i class="fa fa-cogs"></i></span>
 
         <div class="info-box-content bg-orange">
-          <span class="info-box-text">Queue Completed</span>
-          <span class="info-box-number">0</span>
+          <span class="info-box-text">Announcement List</span>
+          <span class="info-box-number">{{$ano}}</span>
         </div>
         <!-- /.info-box-content -->
       </div>
@@ -84,7 +86,7 @@ $no = $blotter;
 
         <div class="info-box-content bg-orange">
           <span class="info-box-text">Registered Resident Records</span>
-          <span class="info-box-number">0</span>
+          <span class="info-box-number">{{$rno}}</span>
         </div>
         <!-- /.info-box-content -->
       </div>

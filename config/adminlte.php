@@ -155,7 +155,7 @@ return [
         ],
         [
             'text'        => 'Update Announcements',
-            'url'         => 'bpinformation/update',
+            'url'         => 'bpinformation/updateannouncements',
             'icon'        => 'newspaper-o',
             'can' => 'isAdmin',
         ],

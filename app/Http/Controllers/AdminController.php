@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CreateBlotter;
+use App\Resident;
+use App\Announcements;
 use Gate;
 
 
@@ -17,10 +19,12 @@ class AdminController extends Controller
 
     public function index()
     {
+        $announcement = Announcements::count('id');
         $blotter = CreateBlotter::count('id');
+        $resident = Resident::count('id');
     	if (!Gate::allows('isAdmin')){
     		abort(500,"Oops, Wizards can't do that thing!");
     	}
-        return view('admin.dashboard',compact('blotter'));
+        return view('admin.dashboard',compact('blotter','resident','announcement'));
     }
 }
