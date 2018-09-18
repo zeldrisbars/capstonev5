@@ -12,7 +12,7 @@ public function __construct()
         $this->middleware('auth');
     }
 
-public $no = 1;
+
 protected function validator(array $request)
     {
         return Validator::make($request, [
@@ -27,7 +27,7 @@ protected function validator(array $request)
     }
 public function index()
     {
-        
+        $no = 1;        
         $blotter = CreateBlotter::where('id',1)->get();
         $finalblotter = $blotter + $no;
         $createblotter = CreateBlotter::all();
