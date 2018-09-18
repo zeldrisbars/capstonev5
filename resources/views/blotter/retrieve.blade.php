@@ -32,15 +32,15 @@
                   <th>Description</th>
                   <th style="width: 40px">Status</th>
                 </tr>
+                @foreach($blotter as $bl)
                 <tr>
-                 @foreach($blotter as $bl)
                  <td>{{$bl->id}}</td>
                  <td>{{$bl->accused}}</td>
                  <td>{{$bl->caseofincident}}</td>
                  <td>{{$bl->detail}}</td>
                  <td>{{$bl->status}}</td>
-                @endforeach
                 </tr>
+                @endforeach
               </tbody></table>
             </div>
             <!-- /.box-body -->
