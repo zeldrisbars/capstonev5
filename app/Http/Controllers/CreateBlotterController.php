@@ -27,10 +27,9 @@ protected function validator(array $request)
     }
 public function index()
     {
-        $blotter = CreateBlotter::where('id')->get();
         $id = CreateBlotter::count('id');
         $createblotter = CreateBlotter::all();
-        return view('blotter.createblotter',compact('createblotter','blotter','id'));
+        return view('blotter.createblotter',compact('createblotter','id'));
     }    
 public function store(Request $request)
 {
