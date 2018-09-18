@@ -21,7 +21,7 @@
 	<form action="{{route('createblotter.store')}}" method="post">
 		{{csrf_field()}}
 	@php
-	$no = 1;
+	$no = 0;
 	$no++;
 	@endphp
 	<div class="box-body">
