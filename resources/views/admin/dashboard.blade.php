@@ -56,13 +56,15 @@
         </div>
   
 
-
+@php
+$no = $blotter;
+@endphp
     <div class="col-md-5">
       <div class="info-box">
         <span class="info-box-icon bg-red"><i class="fa fa-comments-o"></i></span>
         <div class="info-box-content bg-orange">
           <span class="info-box-text">Blotter Reports</span>
-          <span class="info-box-number">{{count($blotter)}}</span>
+          <span class="info-box-number">{{$no}}</span>
         </div>
         <!-- /.info-box-content -->
       </div>

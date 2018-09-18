@@ -17,7 +17,7 @@ class AdminController extends Controller
 
     public function index()
     {
-        $blotter = CreateBlotter::where('id')->get();
+        $blotter = CreateBlotter::count('id');
     	if (!Gate::allows('isAdmin')){
     		abort(500,"Oops, Wizards can't do that thing!");
     	}
