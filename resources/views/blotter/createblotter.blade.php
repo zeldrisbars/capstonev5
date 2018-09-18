@@ -22,10 +22,8 @@
 		{{csrf_field()}}
 	<div class="box-body">
 	@php
-	@foreach($blotter as $bl)
-	$no = $bl;
+	$no = $blotter;
 	$no++;
-	@endforeach
 	@endphp
 	<h5><strong>Take Note: </strong>Check details before submit!<br /> <br /></h5>
 	<input type="hidden" name="id" id="id" value="{{$no}}">
