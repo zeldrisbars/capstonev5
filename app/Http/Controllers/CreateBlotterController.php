@@ -11,6 +11,8 @@ public function __construct()
     {
         $this->middleware('auth');
     }
+
+public $no = 1;
 protected function validator(array $request)
     {
         return Validator::make($request, [
@@ -25,9 +27,10 @@ protected function validator(array $request)
     }
 public function index()
     {
+        $finalblotter = $blotter + $no;
         $blotter = CreateBlotter::where('id',1)->get();
         $createblotter = CreateBlotter::all();
-        return view('blotter.createblotter',compact('createblotter','blotter'));
+        return view('blotter.createblotter',compact('createblotter','blotter','finalblotter'));
     }    
 public function store(Request $request)
 {

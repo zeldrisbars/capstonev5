@@ -20,13 +20,9 @@
 	</div>
 	<form action="{{route('createblotter.store')}}" method="post">
 		{{csrf_field()}}
-	@php
-	$no = 0;
-	$no++;
-	@endphp
 	<div class="box-body">
 	<h5><strong>Take Note: </strong>Check details before submit!<br /> <br /></h5>
-	<input type="hidden" name="id" id="id" value="{{$no}}">
+	<input type="hidden" name="id" id="id" value="{{count('finalblotter')}}">
 	<div class="form-group">
 	<label for="controlno">Control No.</label>
 	<input type="text" class="form-control" name="controlno" id="controlno" placeholder="Enter Control Number">
