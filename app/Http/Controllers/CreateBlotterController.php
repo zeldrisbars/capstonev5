@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\CreateBlotter;
 use Illuminate\Support\Facades\Validator;
+use Gate;
 class CreateBlotterController extends Controller
 {
 public function __construct()
