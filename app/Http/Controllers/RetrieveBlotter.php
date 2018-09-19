@@ -16,9 +16,6 @@ class RetrieveBlotter extends Controller
     	if (!Gate::allows('isDeskOfficer')){
             return view('errors.notallowed');
         }
-        if (!Gate::allows('isAdmin')){
-            return view('errors.notallowed');
-        }
     	$blotter = CreateBlotter::all();
         return view('blotter.retrieve',compact('blotter'));
     } 
