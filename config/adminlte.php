@@ -110,13 +110,11 @@ return [
     'menu' => [
         [
         'header' => 'Admin Module',
-        'can' => 'isAdmin',
         ],
         [
             'text'        => 'Dashboard',
             'url'         => 'admin/dashboard',
             'icon'        => 'star',
-            'can' => 'isAdmin',
         ],
         [
         'header' => 'USER SETTINGS',
@@ -139,57 +137,46 @@ return [
             'text'        => 'Audit Log',
             'url'         => 'admin/audit',
             'icon'        => 'list',
-            'can' => 'isAdmin',
         ],
         
         [
         'header' => 'Public Information Module',
-        'can' => 'isAdmin',
         ],
         [
             'text'        => 'Announcements List',
             'url'         => 'bpinformation/announcements',
             'icon'        => 'info',
-            'can' => 'isAdmin',
-
         ],
         [
             'text'        => 'Update Announcements',
             'url'         => 'bpinformation/updateannouncements',
             'icon'        => 'newspaper-o',
-            'can' => 'isAdmin',
         ],
         [
         'header' => 'Resident Module',
-        'can' => 'isAdmin',
         ],
         [
             'text'        => 'Add Resident',
             'url'         => 'clerk/addresident',
             'icon'        => 'plus',
-            'can' => 'isAdmin',
         ],
         [
             'text'        => 'Search Resident',
             'url'         => 'clerk/residentsearch',
             'icon'        => 'search',
-            'can' => 'isAdmin',
         ],
         [
         'header' => 'Blotter Module',
-        'can' => 'isDeskOfficer',
         ],
         [
             'text'        => 'Create Blotter Report',
             'url'         => 'blotter/createblotter',
             'icon'        => 'plus',
-            'can' => 'isDeskOfficer',
         ],
         [
             'text'        => 'Blotter Reports',
             'url'         => 'blotter/retrieveblotterrecord',
             'icon'        => 'search',
-            'can' => 'isDeskOfficer',
         ],
         [
         'header' => 'Settings',
@@ -210,19 +197,16 @@ return [
         
         [
             'header' => 'Search Queries/Reports',
-            'can' => 'isAdmin',
         ],
         [
             'text'        => 'Queries',
             'url'         => 'search/queries',
             'icon'        => 'map-signs',
-            'can' => 'isAdmin',
         ],
         [
             'text'        => 'Reports',
             'url'         => 'search/reports',
             'icon'        => 'book',
-            'can' => 'isAdmin',
         ],
     ],
 

@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+//Admin
 Route::get('/home','HomeController@index')->name('home');
 Route::get('/admin/dashboard','AdminController@index')->name('dashboard');
 Route::get('/admin/ticket','TicketController@index')->name('ticket');
@@ -33,3 +33,7 @@ Route::resource('clerk/addresident','AddResident');
 Route::get('clerk/residentsearch','ResidentSearch@index');
 Route::get('blotter/settlement','SettlementReport@index');
 Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
+Route::get('/viewforms','DownloadForms@index')->name('viewforms');
+Route::get('barangayclearance/print','PdfController@index');
+
+

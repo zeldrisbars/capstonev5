@@ -29,6 +29,9 @@ public function index()
     {
         $id = CreateBlotter::count('id');
         $createblotter = CreateBlotter::all();
+        if (!Gate::allows('isAdmin') || ('isDeskOfficer')){
+            return view('errors.notallowed');
+        }
         return view('blotter.createblotter',compact('createblotter','id'));
     }    
 public function store(Request $request)

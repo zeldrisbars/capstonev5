@@ -13,6 +13,6 @@ class DataBackupController extends Controller
 
     public function index()
     {
-        return view('admin/datasync');
+        return view('errors.notallowed');
     }
 }

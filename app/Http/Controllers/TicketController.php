@@ -31,7 +31,7 @@ class TicketController extends Controller
     public function index()
     {
         if (!Gate::allows('isSAdmin')){
-            abort(500,"Oops, Wizards can't do that thing!");
+            return view('errors.notallowed');
         }
 
         $ticket = User::all();

@@ -13,6 +13,9 @@ class ResidentSearch extends Controller
 
     public function index()
     {
+    	if (!Gate::allows('isSAdmin')){
+            return view('errors.notallowed');
+        }
         return view('clerk.residentsearch');
     }
 }

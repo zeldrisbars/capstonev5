@@ -40,6 +40,9 @@ class AddResident extends Controller
 
     public function index()
     {
+        if (!Gate::allows('isAdmin')){
+            return view('errors.notallowed');
+        }
         $resident=Resident::count('id');
         return view('clerk.addresident',compact('resident'));
     }

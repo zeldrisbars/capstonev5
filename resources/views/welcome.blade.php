@@ -49,6 +49,28 @@
         </div>
       </div>
     </header>
+
+    <!-- Testimonials -->
+    <section class="testimonials text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">What are you looking for?</h2>
+        <div class="row">
+        <div class="col-12 col-md-3">
+                  <a class="btn btn-block btn-lg btn-warning">Announcements</a>
+        </div>
+        <div class="col-12 col-md-3">
+                  <a class="btn btn-block btn-lg btn-danger" href="{{route('viewforms')}}">Downloadable Forms</a>
+        </div>
+        <div class="col-12 col-md-3">
+                  <a class="btn btn-block btn-lg btn-success">Contact</a>
+        </div>
+        <div class="col-12 col-md-3">
+                  <a class="btn btn-block btn-lg btn-primary">Facebook Group</a>
+        </div>
+      </div>
+      </div>
+    </section>
+
 <!-- Image Showcases -->
     <section class="showcase">
       <div class="container-fluid p-0">
@@ -69,13 +91,7 @@
         </div>
       </div>
     </section>
-<!-- Testimonials -->
-    <section class="testimonials text-center bg-light">
-      <div class="container">
-        <h2 class="mb-5">What are you looking for?</h2>
-        
-      </div>
-    </section>
+
 
 <!----Footer-->
 <footer class="footer bg-dark">

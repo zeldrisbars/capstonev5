@@ -21,6 +21,9 @@ class UpdateAnnouncement extends Controller
     public function index()
     {
         $id = Announcements::count('id');
+        if (!Gate::allows('isAdmin')){
+            return view('errors.notallowed');
+        }
         return view('announcements.updateannouncement',compact('id'));
     }
 public function store(Request $request)
