@@ -13,7 +13,7 @@ class RetrieveBlotter extends Controller
     }
     public function index()
     {
-    	if (!Gate::allows('isDeskOfficer') || ('isAdmin')){
+    	if (!Gate::allows('isDeskOfficer') && ('isAdmin')){
             return view('errors.notallowed');
         }
     	$blotter = CreateBlotter::all();

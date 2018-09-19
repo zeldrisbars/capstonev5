@@ -22,7 +22,7 @@ class AdminController extends Controller
         $announcement = Announcements::count('id');
         $blotter = CreateBlotter::count('id');
         $resident = Resident::count('id');
-    	if (!Gate::allows('isDeskOfficer') || ('isAdmin')){
+    	if (!Gate::allows('isDeskOfficer') && ('isAdmin')){
             return view('errors.notallowed');
         }
         return view('admin.dashboard',compact('blotter','resident','announcement'));
