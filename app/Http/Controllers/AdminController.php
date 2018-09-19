@@ -24,9 +24,9 @@ class AdminController extends Controller
         $resident = Resident::count('id');
     	if (!Gate::allows('isDeskOfficer'){
             return view('errors.notallowed');
-        }
-        if (!Gate::allows('isAdmin'){
+            else if(!Gate::allows('isAdmin'){
             return view('errors.notallowed');
+            } 
         }
         return view('admin.dashboard',compact('blotter','resident','announcement'));
     }
