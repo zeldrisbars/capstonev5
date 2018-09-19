@@ -62,8 +62,7 @@ class TicketController extends Controller
             'name' => $request['name'],
             'username' => $request['username'],
             'password' => Hash::make($request['password']),
-            'role' => $request['role'],
-            
+            'role' => $request['role'],  
             ]);
         return back();
         
@@ -81,7 +80,6 @@ class TicketController extends Controller
             'username' => $request['username'],
             'password' => Hash::make($request['password']),
             'role' => $request['role'],
-            
             ]);
         return back();
     }
