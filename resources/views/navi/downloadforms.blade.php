@@ -51,9 +51,6 @@
     <select name="formtype" id="formtype" class="form-control" onchange="showDiv(this)">
       <option>----CHOOSE TYPE OF FORM----</option>
       <option value="Barangay Clearance">Barangay Clearance</option>
-      <option>Certificate of Indigency</option>
-      <option>Business Permit</option>
-      <option>Certificate of Residency</option>
     </select><br />
   </div>
   <div id="brgyclearance" style="display: none;">
