@@ -13,9 +13,6 @@ class AnnouncementList extends Controller
 
     public function index()
     {
-    	if (!Gate::allows('isAdmin')){
-            return view('errors.notallowed');
-        }
         return view('announcements.announcements');
     }
 }
