@@ -81,9 +81,5 @@ class RolesTableSeeder extends Seeder
         $user6->detachrole($clerk);
         $user6->attachrole($clerk);
 
-        $user7 = User::find(7);
-        $user7->detachrole($author);
-        $user7->attachrole($author);
-
     }
 }

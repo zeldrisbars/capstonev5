@@ -74,6 +74,7 @@ class TicketController extends Controller
     public function destroy(Request $request)
     {
         $ticket = User::findorFail($request->edit_id);
+        
         $ticket->delete([
             'id' => $request['id'],
             'name' => $request['name'],
