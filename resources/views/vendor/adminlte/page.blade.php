@@ -177,7 +177,6 @@
 $('#deleteModal').on('show.bs.modal', function (event) {
     console.log('Modal Opened')
   var button = $(event.relatedTarget) // Button that triggered the modal
-  
   var e_id = button.data('edit_id')
 
   // Extract info from data-* attributes
