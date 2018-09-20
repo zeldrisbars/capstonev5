@@ -89,7 +89,7 @@
   </div>
   <div class="col-md-5">
   <label>&nbspDate Issued</label>
-  <input type="text" name="dateissued" id="dateissued" class="form-control">
+  <input type="text" name="dateissued" id="dateissued" class="form-control" disabled="">
   <br />
   </div>
 
