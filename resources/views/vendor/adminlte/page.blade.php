@@ -177,12 +177,23 @@
 $('#deleteModal').on('show.bs.modal', function (event) {
     console.log('Modal Opened')
   var button = $(event.relatedTarget) // Button that triggered the modal
+  var id = button.data('myid')
+  var name = button.data('myname')
+  var username = button.data('myusername')
+  var password = button.data('mypassword')
+  var role = button.data('myrole')
   var e_id = button.data('edit_id')
 
   // Extract info from data-* attributes
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
+  modal.find('.modal-title').text('Delete User')
+  modal.find('.modal-body #id').val(id)
+  modal.find('.modal-body #name').val(name)
+  modal.find('.modal-body #username').val(username)
+  modal.find('.modal-body #password').val(password)
+  modal.find('.modal-body #role').val(role)
   modal.find('.modal-body #e_id').val(e_id)
 })
 

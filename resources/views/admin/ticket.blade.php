@@ -179,6 +179,7 @@
         
       <div class="modal-body">
         <input type="hidden" name="edit_id" id="e_id" value="">
+        @include('admin.delete')
         <p class="text-center">Are you sure to delete the content of this user?<br/> Actions will be made are not reversible? Please check first before to remove.</p>
       </div>
       <div class="modal-footer">
