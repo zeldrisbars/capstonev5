@@ -46,7 +46,7 @@
         <div class="container-login100">
             <div class="wrap-login100">
                 <form action= "{{route('register')}}" class="login100-form validate-form" method="POST">
-                    {{csrf_field()}}
+                    @csrf
                     <span class="login100-form-title p-b-26">
                         Brgy. Guyong
                     </span>
