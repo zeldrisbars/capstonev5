@@ -1,4 +1,3 @@
-@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +45,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form action= "{{route('login')}}" class="login100-form validate-form" method="POST">
+                <form action= "{{ route('login') }}" class="login100-form validate-form" method="POST">
                     {{csrf_field()}}
                     <span class="login100-form-title p-b-26">
                         Brgy. Guyong
@@ -62,7 +61,7 @@
 
                     <div class="wrap-input100 validate-input" data-validate = "Invalid Username">
                         <input class="input100" type="text" name="login" id="username" required>
-                        <span class="focus-input100" data-placeholder="Username"></span>
+                        <span class="focus-input100" data-placeholder="E-Mail Address / Username"></span>
                     @if ($errors->has('username') || $errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('username') ?: $errors->first('email') }}</strong>

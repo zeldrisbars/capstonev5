@@ -1,4 +1,3 @@
-@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +45,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form action= "{{route('register')}}" class="login100-form validate-form" method="POST">
+                <form action= "{{ route('register') }}" class="login100-form validate-form" method="POST">
                     {{csrf_field()}}
                     <span class="login100-form-title p-b-26">
                         Brgy. Guyong
@@ -60,6 +59,11 @@
                     <div class="wrap-input100 validate-input" data-validate = "Enter Your Name">
                         <input class="input100" type="text" name="name" id="name" required>
                         <span class="focus-input100" data-placeholder="Enter Your Name"></span>
+                    </div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate = "Enter Username">
+                        <input class="input100" type="email" name="email" id="email" required>
+                        <span class="focus-input100" data-placeholder="E-Mail Address"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate = "Enter Username">
