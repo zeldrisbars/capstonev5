@@ -32,7 +32,7 @@
 <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="">Barangay Guyong</a>
-       	<a class="btn btn-flat btn-warning" href="{{ route('login') }}">Sign In For Barangay Officials</a>
+       	<a class="btn btn-flat btn-warning" href="{{ route('login') }}">Sign In</a>
       </div>
     </nav>
 

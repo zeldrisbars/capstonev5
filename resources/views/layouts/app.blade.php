@@ -83,9 +83,6 @@
                     </ul>
                 </div>
             </div>
-        <main class="py-4 bg-img">
-            @yield('content')
-        </main>
     </div>
 </body>
 </html>
