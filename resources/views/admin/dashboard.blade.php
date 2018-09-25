@@ -94,7 +94,7 @@ $ano = $announcement;
     <!-- /.col -->
 
 </div>
-
+</div>
 
 
         

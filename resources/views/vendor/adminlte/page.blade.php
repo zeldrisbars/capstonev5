@@ -156,6 +156,7 @@
   var button = $(event.relatedTarget) // Button that triggered the modal
   var id = button.data('myid')
   var name = button.data('myname')
+  var username = button.data('myemail')
   var username = button.data('myusername')
   var password = button.data('mypassword')
   var role = button.data('myrole')
@@ -168,6 +169,7 @@
   modal.find('.modal-title').text('Edit User')
   modal.find('.modal-body #id').val(id)
   modal.find('.modal-body #name').val(name)
+  modal.find('.modal-body #email').val(email)
   modal.find('.modal-body #username').val(username)
   modal.find('.modal-body #password').val(password)
   modal.find('.modal-body #role').val(role)
@@ -179,6 +181,7 @@ $('#deleteModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var id = button.data('myid')
   var name = button.data('myname')
+  var email = button.data('myemail')
   var username = button.data('myusername')
   var password = button.data('mypassword')
   var role = button.data('myrole')
@@ -191,6 +194,7 @@ $('#deleteModal').on('show.bs.modal', function (event) {
   modal.find('.modal-title').text('Delete User')
   modal.find('.modal-body #id').val(id)
   modal.find('.modal-body #name').val(name)
+  modal.find('.modal-body #email').val(email)
   modal.find('.modal-body #username').val(username)
   modal.find('.modal-body #password').val(password)
   modal.find('.modal-body #role').val(role)

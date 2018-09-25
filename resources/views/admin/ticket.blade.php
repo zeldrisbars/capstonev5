@@ -96,6 +96,11 @@
                   <input type="text" class="form-control" placeholder="Enter your Name" name="name" id="name">
                 </div>
 
+                <div class="form-group">
+                  <label for="email">E-Mail Address</label>
+                  <input type="text" class="form-control" placeholder="Enter your Name" name="email" id="email">
+                </div>
+
         <div class="form-group">
                   <label for="username">Username</label>
                   <input type="text" class="form-control" placeholder="Username" name="username" id="username">

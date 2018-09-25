@@ -93,15 +93,6 @@
                             </button>
                         </div>
                     </div>
-                    <div class="text-center p-t-115">
-                        <span class="txt1">
-                            Already have an Account?
-                        </span>
-
-                        <a class="txt2" href="{{route('login')}}">
-                            Login
-                        </a>
-                    </div>
                 </form>
             </div>
         </div>
