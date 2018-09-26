@@ -58,7 +58,7 @@
                     <br /><br />
                     @php
                     $no = $id;
-                    $no++:
+                    $no++;
                     @endphp
                     <input type="hidden" name="id" id="id" value="{{$no}}">
                     <div class="wrap-input100 validate-input" data-validate = "Enter Your Name">
