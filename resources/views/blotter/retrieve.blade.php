@@ -24,14 +24,17 @@
                <!-- /.box-header -->
             <div class="box-body no-padding">
             	 
-              <table class="table">
-                <tbody><tr>
+              <table id="example1" class="table table-bordered">
+                <thead>
+                  <tr>
                   <th style="width: 10px">#</th>
                   <th>Name of Accused</th>
                   <th>Case</th>
                   <th>Description</th>
                   <th style="width: 40px">Status</th>
                 </tr>
+                </thead>
+                <tbody>
                 @foreach($blotter as $bl)
                 <tr>
                  <td>{{$bl->id}}</td>
