@@ -75,4 +75,9 @@ class RegisterController extends Controller
             
         ]);
     }
+    public function index()
+    {
+        $id = User::old('id');
+        return view('auth.register',compact('id'));
+    }
 }
