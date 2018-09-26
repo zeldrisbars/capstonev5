@@ -2,7 +2,8 @@
 node_modules/
 Homestead.yaml
 Homestead.json
+.env
 
 public/fonts/vendor/font-awesome/fontawesome-webfont.eot
 
-.env
+
