@@ -12,7 +12,7 @@
 
 <br/><br/><br/>
 
-<div class="col-md-8">
+<div class="col-md-12">
                   <div class="box box-solid bg-orange">
                     <div class="box-header with-border">
                         <h3 class="box-title">Welcome to Brgy. Guyong Information System</h3>
@@ -21,14 +21,14 @@
                     </div>
                   </div>
                 </div>
-  <div class="row">
-    <div class="container">
+<div class="row">
+<div class="container-fluid">
 @php
 $no = $blotter;
 $rno = $resident;
 $ano = $announcement;
 @endphp
-    <div class="col-md-5">
+    <div class="col-md-4">
       <div class="info-box">
         <span class="info-box-icon bg-red"><i class="fa fa-comments-o"></i></span>
         <div class="info-box-content bg-orange">
@@ -59,7 +59,7 @@ $ano = $announcement;
       </div>
     </div>
     <!-- /.col -->
-<div class="col-md-6">
+<div class="col-md-8">
 <div class="box box-danger">
             <div class="box-header with-border">
               <i class="fa fa-bar-chart-o"></i>
@@ -71,9 +71,9 @@ $ano = $announcement;
                 </button>
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
-            </div>
             <div class="box-body">
               <div id="donut-chart" style="height: 300px;"></div>
+            </div>
             </div>
             <!-- /.box-body-->
           </div>
@@ -82,13 +82,13 @@ $ano = $announcement;
 </div>
 </div>
 
-<div class="row">
-  <div class="container">
-  <div class="col-md-11">
 
+<div class="row">
+  <div class="container-fluid">
+  <div class="col-md-12">
 <div class="box">
             <div class="box-header bg-orange">
-              <h3 class="box-title">Announcement List</h3>
+              <h3 class="box-title">Resident List</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
