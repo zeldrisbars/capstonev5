@@ -196,6 +196,9 @@
 <!-- DataTables -->
 <script src="{{asset('vendor/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('vendor/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+<script src="{{asset('vendor/input-mask/jquery.inputmask.js')}}"></script>
+<script src="{{asset('vendor/input-mask/jquery.inputmask.date.extensions.js')}}"></script>
+<script src="{{asset('vendor/input-mask/jquery.inputmask.extensions.js')}}"></script>
 <script> 
   $('#editModal').on('show.bs.modal', function (event) {
   console.log('Modal Opened')
@@ -304,6 +307,13 @@ $('#deleteModal').on('show.bs.modal', function (event) {
       'autoWidth'   : false
     })
   })
+
+//Datemask2 mm/dd/yyyy
+    $('#datetime').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+//Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    })
   </script>
     @stack('js')
     @yield('js')

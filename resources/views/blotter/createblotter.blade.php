@@ -45,7 +45,13 @@
 	</div>
 	<div class="form-group">
 	<label for="datetime">Date of Incident</label>
-	<input type="date" class="form-control" name="datetime" id="datetime" placeholder="Date of the Incident">
+	<div class="input-group">
+    <div class="input-group-addon">
+    <i class="fa fa-calendar"></i>
+    </div>
+    <input type="text" class="form-control" id="datetime" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
+    </div>
+    <!-- /.input group -->
 	</div>
 	<div class="form-group">
 	<label for="details">Tell the Incident and the Problem</label>
