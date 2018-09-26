@@ -8,6 +8,7 @@
 	<title>Welcome to Brgy. Guyong</title>
 
 	<!----Bootstrap Core CSS -->
+  <link rel="icon" type="image/png" href="{{asset('images/favicon.ico')}}">
 	<link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">

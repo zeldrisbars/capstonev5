@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="{{asset('vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
   <!-- DataTables -->
   <link rel="stylesheet" href="{{asset('vendor/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
+  <link rel="icon" type="image/png" href="{{asset('images/favicon.ico')}}">
     @stack('css')
     @yield('css')
 @stop
