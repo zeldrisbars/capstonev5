@@ -3,6 +3,19 @@
 @section('adminlte_css')
     <link rel="stylesheet"
           href="{{ asset('vendor/adminlte/dist/css/skins/skin-' . config('adminlte.skin', 'blue') . '.min.css')}} ">
+    <link rel="stylesheet" href="{{asset('vendor/dist/css/skins/_all-skins.min.css')}}">
+    <!-- Morris chart -->
+  <link rel="stylesheet" href="{{asset('vendor/bower_components/morris.js/morris.css')}}">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="{{asset('vendor/bower_components/jvectormap/jquery-jvectormap.css')}}">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="{{asset('vendor/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{asset('vendor/bower_components/bootstrap-daterangepicker/daterangepicker.css')}}">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="{{asset('vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{asset('vendor/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
     @stack('css')
     @yield('css')
 @stop
@@ -149,8 +162,40 @@
 
 @section('adminlte_js')
     <script src="{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}"></script>
+    <!-- jQuery 3 -->
+<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{asset('vendor/bower_components/jquery-ui/jquery-ui.min.js')}}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-  
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Morris.js charts -->
+<script src="{{asset('vendor/bower_components/raphael/raphael.min.js')}}"></script>
+<script src="{{asset('vendor/bower_components/morris.js/morris.min.js')}}"></script>
+<!-- Sparkline -->
+<script src="{{asset('vendor/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{asset('vendor/bower_components/jquery-knob/dist/jquery.knob.min.js')}}"></script>
+<!-- daterangepicker -->
+<script src="{{asset('vendor/bower_components/moment/min/moment.min.js')}}"></script>
+<script src="{{asset('vendor/bower_components/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+<!-- datepicker -->
+<script src="{{asset('vendor/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
+<!-- Slimscroll -->
+<script src="{{asset('vendor/bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+<!-- FastClick -->
+<script src="{{asset('vendor/bower_components/fastclick/lib/fastclick.js')}}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{{asset('vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
+<!-- FLOT CHARTS -->
+<script src="{{asset('vendor/bower_components/Flot/jquery.flot.js')}}"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="{{asset('vendor/bower_components/Flot/jquery.flot.pie.js')}}"></script>
+<!-- DataTables -->
+<script src="{{asset('vendor/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('vendor/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+<script> 
   $('#editModal').on('show.bs.modal', function (event) {
   console.log('Modal Opened')
   var button = $(event.relatedTarget) // Button that triggered the modal
@@ -201,7 +246,64 @@ $('#deleteModal').on('show.bs.modal', function (event) {
   modal.find('.modal-body #e_id').val(e_id)
 })
 
+/*
+     * DONUT CHART
+     * -----------
+     */
+
+    var donutData = [
+      { label: 'Blotter Reports', data: 30, color: '#3c8dbc' },
+      { label: 'Announcements', data: 20, color: '#0073b7' },
+      { label: 'Resident Record', data: 50, color: '#00c0ef' }
+    ]
+    $.plot('#donut-chart', donutData, {
+      series: {
+        pie: {
+          show       : true,
+          radius     : 1,
+          innerRadius: 0.3,
+          label      : {
+            show     : true,
+            radius   : 2 / 3,
+            formatter: labelFormatter,
+            threshold: 0.1
+          }
+
+        }
+      },
+      legend: {
+        show: false
+      }
+    })
+    /*
+     * END DONUT CHART
+     */
+
+/*
+   * Custom Label formatter
+   * ----------------------
+   */
+  function labelFormatter(label, series) {
+    return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
+      + label
+      + '<br>'
+      + Math.round(series.percent) + '%</div>'
+  }
+
 </script>
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+  </script>
     @stack('js')
     @yield('js')
 @stop
