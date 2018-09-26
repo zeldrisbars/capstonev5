@@ -23,7 +23,7 @@
     .parallax { 
 
     /* Set a specific height */
-    height: 500px; 
+    height: 400px; 
 
     /* Create the parallax scrolling effect */
     position: relative;
