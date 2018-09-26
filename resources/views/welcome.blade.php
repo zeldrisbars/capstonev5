@@ -34,7 +34,7 @@
 }
 .bgimg1
 {
-  background-image: url('{{ asset('images/Guyong4.png') }}');
+  background-image: url('{{ asset('images/Guyong BFinal.png') }}');
 }
 .bg-orange
 {
@@ -83,6 +83,7 @@ background-color: orange;
             <h1 class="mb-5">Welcome to Barangay Guyong!</h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <h3>Barangay Guyong Official Webpage</h3>
           </div>
         </div>
       </div>
