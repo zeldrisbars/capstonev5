@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 //Admin
-Route::get('/register','RegisterController@index')->name('register');
+Route::get('/register','Auth/RegisterController@index')->name('register');
 Route::get('/home','HomeController@index')->name('home');
 Route::get('/admin/dashboard','AdminController@index')->name('dashboard');
 Route::get('/admin/ticket','TicketController@index')->name('ticket');
