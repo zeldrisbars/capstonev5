@@ -13,34 +13,71 @@
 	<link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="{{asset('css/landing-page.min.css')}}">
+  <!-- Custom styles for this template -->
+    <link href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
 	<style>
-		header.masthead .overlay
-		{
-		background-image: url('{{ asset('images/Guyong4.png') }}');
-            background-size: cover;
-            background-position:center;
-            opacity: 0.7;
-		}
 		h1
 		{
 			color:#fff432;
 		}
-	</style>
+    .parallax { 
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgimg1
+{
+  background-image: url('{{ asset('images/Guyong4.png') }}');
+}
+.bg-orange
+{
+background-color: orange;
+}
+	
+</style>
 </head>
 
-<body>
+<body id="page-top">
 <!--Nav -->
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="">Barangay Guyong</a>
-       	<a class="btn btn-flat btn-warning" href="{{ route('login') }}">Sign In</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Barangay Guyong</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="#announcements">Announcements</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="#contacts">Contacts</a>
+        </li>
+        <li class="nav-item">
+        <a class="btn btn-flat btn-warning" href="{{ route('login') }}">Sign In</a>
+        </li>
+        </ul>
       </div>
+    </div>
     </nav>
 
-<!-- Masthead -->
-    <header class="masthead text-white text-center">
+<div class="parallax bgimg1">
+<header class="masthead text-white text-center" id="home">
       <div class="overlay"></div>
-      <div class="container">
+      <div class="container text-center">
         <div class="row">
           <div class="col-xl-9 mx-auto">
             <h1 class="mb-5">Welcome to Barangay Guyong!</h1>
@@ -50,8 +87,23 @@
         </div>
       </div>
     </header>
-
+</div>
+<!-- Masthead 
+    <header class="masthead text-white text-center" id="home">
+      <div class="overlay"></div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Welcome to Barangay Guyong!</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          </div>
+        </div>
+      </div>
+    </header>
+--->
     <!-- Testimonials -->
+    <!----
     <section class="testimonials text-center bg-light">
       <div class="container">
         <h2 class="mb-5">What are you looking for?</h2>
@@ -60,7 +112,7 @@
                   <a class="btn btn-block btn-lg btn-warning">Announcements</a>
         </div>
         <div class="col-12 col-md-3">
-                  <a class="btn btn-block btn-lg btn-danger" href="{{route('viewforms')}}">Downloadable Forms</a>
+                  <a class="btn btn-block btn-lg btn-danger" href="route('viewforms')">Downloadable Forms</a>
         </div>
         <div class="col-12 col-md-3">
                   <a class="btn btn-block btn-lg btn-success">Contact</a>
@@ -71,29 +123,20 @@
       </div>
       </div>
     </section>
-
-<!-- Image Showcases -->
-    <section class="showcase">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{asset('images/Guyong Cover.png')}}');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>About Barangay Guyong</h2>
-            <p class="lead mb-0">Barangay Guyong is one of the twenty-four(24) barangays comprising the municipality of Santa Maria, Bulacan, in the Philippines. It is bordered by Barangay Sta. Clara on the south-west, Poblacion on the south, Balasing and Pulong Buhangin on the east, San Jose Patag in the south-east, Caysio on the north, and Barangay Manggahan and Sta. Cruz on the west.</p>
+--->
+<section id="about" class="testimonials bg-orange">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+          <img src="{{ asset('images/Guyong Logo 3.png') }}" style="opacity: 0.95">
           </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('{{asset('images/Guyong 2nd.png')}}');"></div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>Barangay Hall is Fully Operational after May 2018 Barangay Elections</h2>
-            <p class="lead mb-0">Newly Elected Captain of Barangay Guyong, <br/> Mr. Garciano "Kap. Garci" Gravador, reconstructed the Barangay Hall and operations inside. All transactions are operational as of July 2018 as funded of Municipal of Santa Maria. <br />All transactions are transparent between barangay officials and the residents of Barangay Guyong.</p>
+          <div class="col-lg-8 mx-auto">
+            <h2>About Barangay Guyong</h2>
+            <p class="lead">Barangay Guyong is one of the twenty-four(24) barangays comprising the municipality of Santa Maria, Bulacan, in the Philippines. It is bordered by Barangay Sta. Clara on the south-west, Poblacion on the south, Balasing and Pulong Buhangin on the east, San Jose Patag in the south-east, Caysio on the north, and Barangay Manggahan and Sta. Cruz on the west.</p>
           </div>
         </div>
       </div>
     </section>
-
-
 <!----Footer-->
 <footer class="footer bg-dark">
 <div class="container">
@@ -114,4 +157,7 @@
 </body>
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('js/scrolling-nav.js')}}"></script>
+<!-- Plugin JavaScript -->
+    <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 </html>
