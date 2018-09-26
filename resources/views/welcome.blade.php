@@ -138,6 +138,31 @@ background-color: orange;
         </div>
       </div>
     </section>
+
+<section id="contacts" class="testimonials">
+  <div class="container" style="text-align: start;">
+    <div class="row">
+      <div class="col-md-12">
+      <h3>Contacts</h3>
+      <p class="lead">Ask questions for the Information Officer</p>
+      <br />
+      <div class="row">
+      <h5>
+      <i class="fab fa-facebook fa-2x fa-fw"></i>
+      | https://www.facebook.com/guyong.proper.5
+      </h5>
+    </div>
+    <br />
+    <div class="row">
+    <h5>
+    <img src="{{ asset('images/FacebookGroups.png') }}" height="46" width="46">
+    &nbsp| Guyong SMB Netizens
+    </h5>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
 <!----Footer-->
 <footer class="footer bg-dark">
 <div class="container">
@@ -146,13 +171,7 @@ background-color: orange;
             <p class="text-muted small mb-4 mb-lg-0">PUPSMB Capstone Project 2018 © All Rights Reserved.</p>
           </div>
           <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fab fa-facebook fa-2x fa-fw"></i>
-                </a>
-              </li>
-            </ul>
+            
           </div>
 	</footer>
 </body>
