@@ -49,7 +49,6 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'id' => 'required|integer|max:255',
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'username' => 'required|string|max:255|unique:users',
@@ -68,7 +67,6 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'id' => $data['id'],
             'name' => $data['name'],
             'email' => $data['email'],
             'username' => $data['username'],
@@ -76,10 +74,5 @@ class RegisterController extends Controller
             'role' => $data['role'],
             
         ]);
-    }
-    public function index()
-    {
-        $id = User::count('id');
-        return view('auth.register',compact('id'));
     }
 }

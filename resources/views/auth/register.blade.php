@@ -56,11 +56,6 @@
                         </span>
                     </div>
                     <br /><br />
-                    @php
-                    $no = $id;
-                    $no++;
-                    @endphp
-                    <input type="hidden" name="id" id="id" value="{{$no}}">
                     <div class="wrap-input100 validate-input" data-validate = "Enter Your Name">
                         <input class="input100" type="text" name="name" id="name" required>
                         <span class="focus-input100" data-placeholder="Enter Your Name"></span>
