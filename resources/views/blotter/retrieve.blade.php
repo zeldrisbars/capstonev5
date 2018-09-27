@@ -41,7 +41,7 @@
                  <td>{{$bl->accused}}</td>
                  <td>{{$bl->caseofincident}}</td>
                  <td>{{$bl->detail}}</td>
-                 <td>{{$bl->status}}</td>
+                 <td><span class="badge bg-red">{{$bl->status}}</span></td>
                 </tr>
                 @endforeach
               </tbody></table>
