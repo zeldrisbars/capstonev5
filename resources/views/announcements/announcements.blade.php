@@ -22,11 +22,20 @@
                 <thead>
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th>Title</th>
+                  <th style="width: 50px">Title</th>
                   <th>Description</th>
                   <th style="width: 40px">Options</th>
                 </tr>
                 </thead>
+                <tbody>
+                  @foreach($announcements as $an)
+                  <tr>
+                    <td>{{$an->id}}</td>
+                    <td>{{$an->title}}</td>
+                    <td>{{$an->description}}</td>
+                    <td></td>
+                  </tr>
+                  @endforeach
               </tbody></table>
             </div>
             <!-- /.box-body -->

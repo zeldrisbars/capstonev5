@@ -55,28 +55,25 @@
                             Sign In
                         </span>
                     </div>
-                    <span class="login100-form-title p-b-48">
-                        
-                    </span>
-
+                    <br />
+                    <div class="text-center p-t-10">
+                    @if ($errors->has('username') || $errors->has('email'))
+                                    <span class="txt1 text-center" style="color: red;">
+                                        <strong>Message: <br />{{ $errors->first('username') ?: $errors->first('email') }}</strong>
+                                    </span>
+                    @endif
+                    </div>
+                    <br /><br />
                     <div class="wrap-input100 validate-input" data-validate = "Invalid Username">
                         <input class="input100" type="text" name="login" id="username" required>
                         <span class="focus-input100" data-placeholder="E-Mail Address / Username"></span>
-                    @if ($errors->has('username') || $errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('username') ?: $errors->first('email') }}</strong>
-                                    </span>
-                    @endif
+                    
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Enter password">
                         <input class="input100" type="password" name="password" id="password" required>
                         <span class="focus-input100" data-placeholder="Password"></span>
-                    @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                    
                     </div>
 
                     <div class="container-login100-form-btn">
@@ -88,7 +85,7 @@
                         </div>
                     </div>
 
-                    <div class="text-center p-t-115">
+                    <div class="text-center p-t-50">
                         <span class="txt1">
                             Don’t have an account?
                         </span>

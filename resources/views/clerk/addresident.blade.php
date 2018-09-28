@@ -106,6 +106,24 @@
 					<th>Zip Code
 					<td><input type="text" name="zipcode" id="zipcode" class="form-control"></td>
 					</th>
+				<th>Sitio
+					<td>
+						<select name="sitio" id="sitio" class="form-control">
+							<option>|CHOOSE SITIO|</option>
+							<option>M. SANTOS/ MALAWAK</option>
+							<option>BATO</option>
+							<option>LIBIS</option>
+							<option>PINTONG BATO</option>
+							<option>CENTRO</option>
+							<option>PANTALEON II</option>
+							<option>PANTALEON I</option>
+							<option>LUWASAN</option>
+							<option>MATANG TUBIG/LOTE</option>
+							<option>CELESTE</option>
+						</select>
+					</td>
+					</th>
+
 				</tr>
 				<tr><td><h4>Parents Information</h4></td></tr>
 				<tr>

@@ -11,46 +11,45 @@
         <li>Resident Module</li>
         <li class="active">Search Resident</li>
       </ol>
-
-      <br /><br />
-     <div class="box">
-     	<div class="box-header bg-orange">
-     	<div class="box-title">Search Resident
-		</div>
-     	</div>
-     	<div class="box-body">
-	<div class="container-fluid">
-	<div class="col-md-12">
-	<div class="input-group margin">
-	<input type="text" class="form-control" name="">
-	<span class="input-group-btn">
-	<button type="button" class="btn btn-info btn-flat">Search</button>
-	</span>
-	</div>
-	</div>
-	</div>
-	</div>
+<br /><br /><br />
+      <div class="container-fluid">
+<div class="col-xs-12">
+<div class="box">
+			<div class="box-header bg-orange">
+				<div class="box-title">Resident Record</div>
+			</div>
+<div class="box-body">        
+               <!-- /.box-header -->
+            <div class="box-body no-padding">
+            	 
+              <table id="example1" class="table table-bordered">
+                <thead>
+                  <tr>
+                  <th style="width: 10px">#</th>
+                  <th>Name</th>
+                  <th>Sitio</th>
+                  <th>Precinct #</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($resident as $re)
+                <tr>
+                 <td>{{$re->id}}</td>
+                 <td>{{$re->lastname}}, {{$re->firstname}}&nbsp{{$re->middlename}}</td>
+                 <td>{{$re->sitio}}</td>
+                 <td>{{$re->votersno}}</td>
+                </tr>
+                @endforeach
+              </tbody></table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+	
 </div>
 
-	<br />
-	<div class="box">
-	<div class="box-header bg-orange">
-    <div class="box-title">Results
-	</div>
-    </div>
+</div>
 
-	<div class="box-body">
-	<div class="container">
-	
-
-
-	</div>
-
-	</div>
-
-
-
-
-	</div>
+</div>
 
 @endsection

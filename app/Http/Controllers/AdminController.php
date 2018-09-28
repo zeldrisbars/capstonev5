@@ -22,6 +22,7 @@ class AdminController extends Controller
         $announcement = Announcements::count('id');
         $blotter = CreateBlotter::count('id');
         $resident = Resident::count('id');
-        return view('admin.dashboard',compact('blotter','resident','announcement'));
+        $allres = Resident::all();
+        return view('admin.dashboard',compact('blotter','resident','announcement','allres'));
     }
 }

@@ -67,6 +67,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'id' => $data['id'],
             'name' => $data['name'],
             'email' => $data['email'],
             'username' => $data['username'],
@@ -74,5 +75,10 @@ class RegisterController extends Controller
             'role' => $data['role'],
             
         ]);
+    }
+public function index()
+    {
+        $user = User::count('id');
+        return view('auth.register',compact('user'));
     }
 }

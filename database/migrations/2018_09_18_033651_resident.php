@@ -28,6 +28,7 @@ class Resident extends Migration
             $table->string('cityprovince');
             $table->string('province');
             $table->string('zipcode');
+            $table->string('sitio');
             $table->string('mlast');
             $table->string('mfirst');
             $table->string('mmiddle');

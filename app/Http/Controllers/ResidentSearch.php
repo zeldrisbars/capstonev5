@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Gate;
+use App\Resident;
 
 class ResidentSearch extends Controller
 {
@@ -14,8 +15,8 @@ class ResidentSearch extends Controller
 
     public function index()
     {
-    	
-        return view('clerk.residentsearch');
+    	$resident = Resident::all();
+        return view('clerk.residentsearch',compact('resident'));
     }
 }
 

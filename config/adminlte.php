@@ -143,12 +143,12 @@ return [
         'header' => 'Public Information Module',
         ],
         [
-            'text'        => 'Announcements List',
+            'text'        => 'Announcement List',
             'url'         => 'bpinformation/announcements',
             'icon'        => 'info',
         ],
         [
-            'text'        => 'Update Announcements',
+            'text'        => 'Create Announcements',
             'url'         => 'bpinformation/updateannouncements',
             'icon'        => 'newspaper-o',
         ],
