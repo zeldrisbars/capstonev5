@@ -40,7 +40,15 @@
 {
 background-color: orange;
 }
-	
+.navbar
+{
+  display: flex;
+}
+.navbar-toggler
+{
+  border-radius: 0;
+  border-width: 0;
+}
 </style>
 </head>
 
@@ -49,7 +57,7 @@ background-color: orange;
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Barangay Guyong</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="">
           <span class="fa fa-bars"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
