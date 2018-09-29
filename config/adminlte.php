@@ -178,36 +178,6 @@ return [
             'url'         => 'blotter/retrieveblotterrecord',
             'icon'        => 'search',
         ],
-        [
-        'header' => 'Settings',
-        'can' => 'isSAdmin',
-        ],
-        [
-          'text'        => 'Profile',
-            'url'         => 'settings/profile',
-            'icon'        => 'desktop',
-            'can' => 'isSAdmin',  
-        ],
-        [
-            'text'        => 'Change Password',
-            'url'         => 'settings/changepassword',
-            'icon'        => 'gear',
-            'can' => 'isSAdmin',
-        ],
-        
-        [
-            'header' => 'Search Queries/Reports',
-        ],
-        [
-            'text'        => 'Queries',
-            'url'         => 'search/queries',
-            'icon'        => 'map-signs',
-        ],
-        [
-            'text'        => 'Reports',
-            'url'         => 'search/reports',
-            'icon'        => 'book',
-        ],
     ],
 
     /*
