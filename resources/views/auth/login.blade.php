@@ -59,7 +59,7 @@
                     <div class="text-center p-t-10">
                     @if ($errors->has('username') || $errors->has('email'))
                                     <span class="txt1 text-center" style="color: red;">
-                                        <strong>Message: <br />{{ $errors->first('username') ?: $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('username') ?: $errors->first('email') }}</strong>
                                     </span>
                     @endif
                     </div>
