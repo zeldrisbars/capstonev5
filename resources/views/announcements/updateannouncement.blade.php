@@ -47,18 +47,16 @@
 	<div class="row">
 	<div class="col-md-12">
 	<label>Description and Details</label>
-	<textarea class="form-control" name="description"></textarea>
+	<textarea id="description" name="description" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
 	</div>
 	</div>
 	<!--row -->
 	</div>
 </div>
 	<div class="box-footer">
-	<div class="col-md-11">
+	<div class="col-md-12">
 	<button type="submit" class="btn btn-primary btn-flat btn-sm pull-right">Create</button>
-	</div>
-	<div class="col-md-1">
-	<button type="button" class="btn btn-danger btn-flat btn-sm pull-right">Reset</button>
+	<button type="button" class="btn btn-danger btn-flat btn-sm pull-left">Reset</button>
 	</div>
 	</div>
 	</div>

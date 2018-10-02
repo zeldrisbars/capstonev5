@@ -32,7 +32,7 @@
                   <tr>
                     <td>{{$an->id}}</td>
                     <td>{{$an->title}}</td>
-                    <td>{{$an->description}}</td>
+                    <td>{!!$an->description!!}</td>
                     <td></td>
                   </tr>
                   @endforeach

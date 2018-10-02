@@ -16,7 +16,17 @@
   <link rel="stylesheet" href="{{asset('vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
   <!-- DataTables -->
   <link rel="stylesheet" href="{{asset('vendor/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
+    <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="{{asset('vendor/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <link rel="icon" type="image/png" href="{{asset('images/favicon.ico')}}">
+  <style>
+    .form-group.required .control-label:after 
+    { 
+   content:"*";
+   color:red;
+   position: absolute;
+}
+  </style>
     @stack('css')
     @yield('css')
 @stop
@@ -189,6 +199,7 @@
 <script src="{{asset('vendor/bower_components/fastclick/lib/fastclick.js')}}"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="{{asset('vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
+<script src="{{asset('vendor/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- FLOT CHARTS -->
 <script src="{{asset('vendor/bower_components/Flot/jquery.flot.js')}}"></script>
 <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
@@ -310,10 +321,14 @@ $('#deleteModal').on('show.bs.modal', function (event) {
 
 //Datemask2 mm/dd/yyyy
     $('#datetime').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    $('#birthdate').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
 //Date picker
     $('#datepicker').datepicker({
       autoclose: true
     })
+$(function () {
+$('#description').wysihtml5()
+})
   </script>
     @stack('js')
     @yield('js')

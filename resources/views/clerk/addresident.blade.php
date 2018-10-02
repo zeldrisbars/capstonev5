@@ -36,7 +36,7 @@
                 <tbody>
                	<tr>
                  <th>Last Name
-				<td><input type="text" name="lastname" id="lastname" class="form-control"></td>
+				<td><input type="text" name="lastname" id="lastname" class="form-control" required></td>
                  </th>
                  <th>First Name
                  	<td><input type="text" name="firstname" id="firstname" class="form-control"></td>
@@ -65,7 +65,7 @@
                 </tr>
                 <tr>
                 	<th>Birth Date
-					<td><input type="Date" name="birthdate" id="birthdate" class="form-control"></td>
+					<td><input type="text" name="birthdate" id="birthdate" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask></td>
                 	</th>
                 	<th>Current Voters Precinct Number
                 		<td><input type="text" name="votersno" id="votersno" class="form-control"></td>

@@ -49,10 +49,10 @@ class RolesTableSeeder extends Seeder
         $clerk->display_name = "Clerk";
         $clerk->save();
 
-        $author = new Role();
-        $author->name = "author";
-        $author->display_name = "Author";
-        $author->save();
+        $citizen = new Role();
+        $citizen->name = "citizen";
+        $citizen->display_name = "Citizen";
+        $citizen->save();
 
 
         //Attach the roles
@@ -80,6 +80,10 @@ class RolesTableSeeder extends Seeder
         $user6 = User::find(6);
         $user6->detachrole($clerk);
         $user6->attachrole($clerk);
+
+        $user6 = User::find(7);
+        $user6->detachrole($citizen);
+        $user6->attachrole($citizen);
 
     }
 }

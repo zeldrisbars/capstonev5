@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/','Welcome@index');
 Auth::routes();
 //Admin
 Route::get('/register','Auth\RegisterController@index')->name('register');

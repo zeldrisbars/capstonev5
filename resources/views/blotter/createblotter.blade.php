@@ -27,38 +27,38 @@
 	@endphp
 	<h5><strong>Take Note: </strong>Check details before submit!<br /> <br /></h5>
 	<input type="hidden" name="id" id="id" value="{{$no}}">
-	<div class="form-group">
-	<label for="controlno">Control No.</label>
-	<input type="text" class="form-control" name="controlno" id="controlno" placeholder="Enter Control Number">
+	<div class="form-group required">
+	<label class="control-label" for="controlno">Control No.</label>
+	<input type="text" class="form-control" required="required" name="controlno" id="controlno" placeholder="Enter Control Number">
 	</div>
-	<div class="form-group">
-	<label for="accused">Name of Accused</label>
-	<input type="text" class="form-control" name="accused" id="accused" placeholder="Name">
+	<div class="form-group required">
+	<label class="control-label" for="accused">Name of Accused</label>
+	<input type="text" class="form-control" name="accused" id="accused" placeholder="Name" required="required">
 	</div>
-	<div class="form-group">
-	<label for="complainant">Name of Complainant</label>
-	<input type="text" class="form-control" name="complainant" id="complainant" placeholder="Name">
+	<div class="form-group required">
+	<label class="control-label" for="complainant">Name of Complainant</label>
+	<input type="text" class="form-control" name="complainant" id="complainant" placeholder="Name" required="required">
 	</div>
-	<div class="form-group">
-	<label for="caseofincident">Cause of Incident</label>
-	<input type="text" class="form-control" name="caseofincident" id="caseofincident" placeholder="Cause of Incident">
+	<div class="form-group required">
+	<label class="control-label" for="caseofincident">Cause of Incident</label>
+	<input type="text" class="form-control" name="caseofincident" id="caseofincident" placeholder="Cause of Incident" required="required">
 	</div>
-	<div class="form-group">
-	<label for="datetime">Date of Incident</label>
+	<div class="form-group required">
+	<label class="control-label" for="datetime">Date of Incident</label>
 	<div class="input-group">
     <div class="input-group-addon">
     <i class="fa fa-calendar"></i>
     </div>
-    <input type="text" class="form-control" name="datetime" id="datetime" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
+    <input type="text" class="form-control" name="datetime" id="datetime" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask required="required">
     </div>
     <!-- /.input group -->
 	</div>
-	<div class="form-group">
-	<label for="details">Tell the Incident and the Problem</label>
-	<textarea class="form-control" rows="5" name="detail" id="details" placeholder="Please type the details."></textarea>
+	<div class="form-group required">
+	<label class="control-label" for="details">Tell the Incident and the Problem</label>
+	<textarea class="form-control" rows="5" name="detail" id="details" placeholder="Please type the details." required="required"></textarea>
 	</div>
-	<div class="form-group">
-	<label for="status">Status</label>
+	<div class="form-group required">
+	<label class="control-label" for="status">Status</label>
 	<select name="status" id="status" class="form-control">
 		<option>Pending</option>
 		<option>On-Going</option>

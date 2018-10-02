@@ -16,7 +16,7 @@ class UpdateAnnouncement extends Controller
     {
         return Validator::make($request, [
             'title' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
+            'description' => 'required|max:4098',
         ]);
     }
     public function index()

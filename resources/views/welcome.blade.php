@@ -32,9 +32,19 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.bgimgsm
+{
+  height: 10px;
+  background-color: orange;
+}
 .bgimg1
 {
   background-image: url('{{ asset('images/Guyong BFinal.png') }}');
+}
+.bgimg2
+{
+  height: 300px;
+  background-image: url('{{ asset('images/Guyong BG2.png') }}');
 }
 .bg-orange
 {
@@ -146,6 +156,40 @@ background-color: orange;
         </div>
       </div>
     </section>
+
+
+<div class="parallax bgimg2">
+<header class="masthead text-white text-right" id="announcements">
+      <div class="container text-right">
+          <div class="col-md-12 mx-auto">
+            <h1>Announcements |</h1>
+          </div>
+          <div class="col-md-12">
+          <h3>News and Information</h3>
+          </div>
+      </div>
+    </header>
+</div>
+
+@foreach($announcements as $an)
+<section class="testimonials" style="background-color: green;" >
+  <div class="container" style="text-align: start">
+    <div class="row">
+    <div class="col-lg-4">
+    </div>
+  <div class="col-lg-8">
+  <h2 style="color: white;">{{$an->title}}</h2>
+  <h6 style="color: white;">Posted: {{$an->created_at}}</h6>
+  <br />
+<h5 style="color: white;">
+{!!$an->description!!}
+</h5>
+</div>
+  </div>
+  </div>
+</section>
+<div class="parallax bgimgsm"><br /></div>
+@endforeach
 
 <section id="contacts" class="testimonials">
   <div class="container" style="text-align: start;">

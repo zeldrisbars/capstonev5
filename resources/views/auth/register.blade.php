@@ -55,12 +55,28 @@
                             Sign Up
                         </span>
                     </div>
+                    <br />
+                    <div class="text-center p-t-10">
+                        <span class="txt1 text-center" style="color: red;>
+                   @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                        </span>
+                    </div>
                     <br /><br />
                     @php
                     $no = $user;
                     $no++;
                     @endphp
-                        <input type="hidden" name="id" id="id" value="{{$no}}">
+                    <br />
+                    
+                    
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="hidden" name="id" id="id" value="{{$no}}">
+                    </div>
+
                     <div class="wrap-input100 validate-input" data-validate = "Enter Your Name">
                         <input class="input100" type="text" name="name" id="name" required>
                         <span class="focus-input100" data-placeholder="Enter Your Name"></span>

@@ -117,7 +117,12 @@ return [
             'icon'        => 'star',
         ],
         [
-        'header' => 'USER SETTINGS',
+            'text'        => 'Print Downloadable Forms',
+            'url'         => 'admin/downloadforms',
+            'icon'        => 'print',
+        ],
+        [
+        'header' => 'Role and Audit',
         'can' => 'isSAdmin',
         ],
         [
@@ -166,6 +171,16 @@ return [
             'icon'        => 'search',
         ],
         [
+            'text'        => 'Non-Resident',
+            'url'         => 'clerk/nonresident',
+            'icon'        => 'book',
+        ],
+        [
+            'text'        => 'Pending Resident',
+            'url'         => 'clerk/nonresident',
+            'icon'        => 'exclamation',
+        ],
+        [
         'header' => 'Blotter Module',
         ],
         [
@@ -177,6 +192,11 @@ return [
             'text'        => 'Blotter Reports',
             'url'         => 'blotter/retrieveblotterrecord',
             'icon'        => 'search',
+        ],
+        [
+            'text'        => 'Update Blotter Report',
+            'url'         => 'blotter/uodateblotterrecord',
+            'icon'        => 'exclamation',
         ],
     ],
 

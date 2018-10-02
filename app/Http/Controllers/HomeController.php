@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
+use App\CreateBlotter;
+use App\Resident;
+use App\Announcements;
+use Gate;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view ('/home');
+        $announcement = Announcements::count('id');
+        $blotter = CreateBlotter::count('id');
+        $resident = Resident::count('id');
+        $allres = Resident::all();
+        return view('admin.dashboard',compact('blotter','resident','announcement','allres'));
     }
 }
