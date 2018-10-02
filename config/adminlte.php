@@ -195,7 +195,7 @@ return [
         ],
         [
             'text'        => 'Update Blotter Report',
-            'url'         => 'blotter/uodateblotterrecord',
+            'url'         => 'blotter/updateblotterrecord',
             'icon'        => 'exclamation',
         ],
     ],
