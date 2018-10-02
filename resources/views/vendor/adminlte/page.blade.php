@@ -19,6 +19,7 @@
     <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="{{asset('vendor/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <link rel="icon" type="image/png" href="{{asset('images/favicon.ico')}}">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400" rel="stylesheet" type="text/css">
   <style>
     .form-group.required .control-label:after 
     { 
