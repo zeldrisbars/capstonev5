@@ -122,7 +122,7 @@ return [
             'icon'        => 'print',
         ],
         [
-        'header' => 'Role and Audit',
+        'header' => 'User Role Settings',
         'can' => 'isSAdmin',
         ],
         [
@@ -137,11 +137,6 @@ return [
             'url'         => 'admin/datasync',
             'icon'        => 'refresh',
             'can' => 'isUser',  
-        ],
-        [
-            'text'        => 'Audit Log',
-            'url'         => 'admin/audit',
-            'icon'        => 'list',
         ],
         
         [
@@ -177,7 +172,7 @@ return [
         ],
         [
             'text'        => 'Pending Resident',
-            'url'         => 'clerk/nonresident',
+            'url'         => 'clerk/pendingresident',
             'icon'        => 'exclamation',
         ],
         [
