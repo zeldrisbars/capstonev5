@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('vendor/select2/select2.min.css')}}">
 <!--===============================================================================================-->  
     <link rel="stylesheet" type="text/css" href="{{asset('vendor/daterangepicker/daterangepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/animate/animate.css')}}">
 <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
@@ -42,9 +43,9 @@
 </style>
 <body>
     
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
+    <div class="limiter ">
+        <div class="container-login100 animated fadeIn">
+            <div class="wrap-login100 animated fadeInLeft delay-5s">
                 <form action= "{{ route('login') }}" class="login100-form validate-form" method="POST">
                     {{csrf_field()}}
                     <span class="login100-form-title p-b-26">

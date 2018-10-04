@@ -53,7 +53,7 @@
           <td>{{$tic->username}}</td>
           <td>{{$tic->role}}</td>
           <td>
-          <button type="button" class="btn btn-warning" data-myid="{{$tic->id}}" data-myname="{{$tic->name}}" data-myusername="{{$tic->username}}" data-mypassword="{{$tic->password}}" data-myrole="{{$tic->role}}" data-edit_id="{{$tic->id}}" data-toggle="modal" data-target="#editModal">Edit</button>
+          <button type="button" class="btn btn-warning" data-myid="{{$tic->id}}" data-myname="{{$tic->name}}" data-myemail="{{$tic->email}}"data-myusername="{{$tic->username}}" data-mypassword="{{$tic->password}}" data-myrole="{{$tic->role}}" data-edit_id="{{$tic->id}}" data-toggle="modal" data-target="#editModal">Edit</button>
           &nbsp
           <button type="button" class="btn btn-danger" data-edit_id="{{$tic->id}}" data-toggle="modal" data-target="#deleteModal">Remove</button>
           </td>

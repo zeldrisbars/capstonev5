@@ -15,7 +15,7 @@
 
 <br/><br/><br/>
 
-<div class="col-md-12">
+<div class="col-md-12 animated fadeIn">
                   <div class="box box-solid bg-orange">
                     <div class="box-header with-border">
                         <h3 class="box-title">Welcome to Brgy. Guyong Information System</h3>
@@ -24,7 +24,7 @@
                     </div>
                   </div>
                 </div>
-<div class="row">
+<div class="row animated fadeIn">
 <div class="container-fluid">
 @php
 $no = $blotter;
@@ -32,7 +32,7 @@ $rno = $resident;
 $ano = $announcement;
 $imba = $allres;
 @endphp
-    <div class="col-md-4">
+    <div class="col-md-4 animated fadeIn">
       <div class="info-box">
         <span class="info-box-icon bg-red"><i class="fa fa-comments-o"></i></span>
         <div class="info-box-content bg-orange">
@@ -87,7 +87,7 @@ $imba = $allres;
 </div>
 
 
-<div class="row">
+<div class="row animated fadeIn">
   <div class="container-fluid">
   <div class="col-md-8">
 <div class="box">

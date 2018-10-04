@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="{{asset('css/landing-page.min.css')}}">
   <!-- Custom styles for this template -->
     <link href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('vendor/animate/animate.css')}}">
 	<style>
 		h1
 		{
@@ -64,7 +65,7 @@ background-color: orange;
 
 <body id="page-top">
 <!--Nav -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top animated fadeIn" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Barangay Guyong</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="">
@@ -92,7 +93,7 @@ background-color: orange;
     </div>
     </nav>
 
-<div class="parallax bgimg1">
+<div class="parallax bgimg1 animated  slideInLeft delay-2s">
 <header class="masthead text-white text-center" id="home">
       <div class="overlay"></div>
       <div class="container text-center">
@@ -143,7 +144,7 @@ background-color: orange;
       </div>
     </section>
 --->
-<section id="about" class="testimonials bg-orange">
+<section id="about" class="testimonials animated slideInRight bg-orange">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
@@ -158,7 +159,7 @@ background-color: orange;
     </section>
 
 
-<div class="parallax bgimg2">
+<div class="parallax bgimg2 animated slideInRight">
 <header class="masthead text-white text-right" id="announcements">
       <div class="container text-right">
           <div class="col-md-12 mx-auto">
@@ -191,7 +192,7 @@ background-color: orange;
 <div class="parallax bgimgsm"><br /></div>
 @endforeach
 
-<section id="contacts" class="testimonials">
+<section id="contacts" class="testimonials animated slideInLeft">
   <div class="container" style="text-align: start;">
     <div class="row">
       <div class="col-md-12">
@@ -222,7 +223,7 @@ background-color: orange;
   </div>
 </section>
 <!----Footer-->
-<footer class="footer bg-dark static-bottom">
+<footer class="footer bg-dark static-bottom animated fadeIn">
 <div class="container">
         <div class="row">
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">

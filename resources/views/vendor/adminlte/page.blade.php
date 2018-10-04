@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="{{asset('vendor/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
     <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="{{asset('vendor/bower_components/bootstrap/dist/css/bootstrap-theme.min.css')}}">
+  <link rel="stylesheet" href="{{asset('vendor/animate/animate.css')}}">
   <link rel="icon" type="image/png" href="{{asset('images/favicon.ico')}}">
     
   <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
@@ -117,7 +118,7 @@
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
               <!----User Panel -->
-        <div class="user-panel">
+        <div class="user-panel animated fadeInLeft delay-5s">
         <div class="pull-left image">
           <img src="{{asset('images/user.png') }}" class="img-circle" alt="User Image">
         </div>
@@ -127,7 +128,7 @@
         </div>
       </div>
                 <!-- Sidebar Menu -->
-                <ul class="sidebar-menu" data-widget="tree">
+                <ul class="sidebar-menu animated fadeInLeftBig delay-5s" data-widget="tree">
                     @each('adminlte::partials.menu-item', $adminlte->menu(), 'item')
                 </ul>
                 <!-- /.sidebar-menu -->
@@ -219,7 +220,7 @@
   var button = $(event.relatedTarget) // Button that triggered the modal
   var id = button.data('myid')
   var name = button.data('myname')
-  var username = button.data('myemail')
+  var email = button.data('myemail')
   var username = button.data('myusername')
   var password = button.data('mypassword')
   var role = button.data('myrole')
