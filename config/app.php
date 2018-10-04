@@ -149,6 +149,7 @@ return [
         JeroenNoten\LaravelAdminLte\ServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Yoeunes\Toastr\ToastrServiceProvider::class,
         /*
          * Package Service Providers...
          */

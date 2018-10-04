@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="{{asset('vendor/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <link rel="icon" type="image/png" href="{{asset('images/favicon.ico')}}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
   <style>
     .form-group.required .control-label:after 
     { 
@@ -211,6 +212,7 @@
 <script src="{{asset('vendor/input-mask/jquery.inputmask.js')}}"></script>
 <script src="{{asset('vendor/input-mask/jquery.inputmask.date.extensions.js')}}"></script>
 <script src="{{asset('vendor/input-mask/jquery.inputmask.extensions.js')}}"></script>
+<script src="{{  asset('js/toastr.js')  }}"></script>
 <script> 
   $('#editModal').on('show.bs.modal', function (event) {
   console.log('Modal Opened')

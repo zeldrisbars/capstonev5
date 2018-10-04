@@ -1,6 +1,9 @@
 @extends('adminlte::page')
-
 @section('content')
+@toastr_css
+@jquery
+@toastr_js
+@toastr_render
 <section class="content-header">
       <h1>
         Dashboard

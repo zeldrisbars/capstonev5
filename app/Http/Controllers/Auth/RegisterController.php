@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use DB;
 
 class RegisterController extends Controller
 {
@@ -80,6 +81,7 @@ class RegisterController extends Controller
 public function index()
     {
         $user = User::count('id');
-        return view('auth.register',compact('user'));
+        $rolef = DB::select(DB::raw('SELECT role FROM `users` WHERE `role` = "Super Administrator"'));
+        return view('auth.register',compact('user','rolef'));
     }
 }

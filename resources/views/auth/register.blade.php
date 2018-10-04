@@ -62,13 +62,14 @@
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+                    @endif
                         </span>
                     </div>
                     <br /><br />
                     @php
                     $no = $user;
                     $no++;
+                    $rolename = $rolef;
                     @endphp
                     <br />
                     
@@ -101,19 +102,23 @@
                         <input class="input100" type="password" name="password_confirmation" id="password-confirm" required>
                         <span class="focus-input100" data-placeholder="Confirm Password"></span>
                     </div>
+
                     <div class="wrap-input100 validate-input" data-validate = "Role?">
                         <input class="input100" type="text" name="role" id="role" required>
                         <span class="focus-input100" data-placeholder="Role? Type Super Administrator" ></span>
                     </div>                    
-
+                    
+                   
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
+                            <div id="formbutton">
                             <button class="login100-form-btn" type="submit">
                                 Register
+                            </div>
                             </button>
-                        </div>
                     </div>
+                </div>
                 </form>
             </div>
         </div>
@@ -138,6 +143,5 @@
     <script src="{{asset('vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
     <script src="{{asset('js/main.js')}}"></script>
-
 </body>
 </html>

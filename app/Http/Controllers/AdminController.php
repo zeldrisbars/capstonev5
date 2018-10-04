@@ -19,6 +19,8 @@ class AdminController extends Controller
 
     public function index()
     {
+        toastr()->success('Successfully Logged In!');
+
         $announcement = Announcements::count('id');
         $blotter = CreateBlotter::count('id');
         $resident = Resident::count('id');
