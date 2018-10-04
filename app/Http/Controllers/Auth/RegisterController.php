@@ -68,20 +68,25 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if ($data['role'] == "Super Administrator")
+        {   
+            return view ('auth.register');
+        }
+        else
+        {
         return User::create([
             'id' => $data['id'],
             'name' => $data['name'],
             'email' => $data['email'],
             'username' => $data['username'],
             'password' => Hash::make($data['password']),
-            'role' => $data['role'],
-            
+            'role' => $data['role'],  
         ]);
+    }
     }
 public function index()
     {
         $user = User::count('id');
-        $rolef = DB::select(DB::raw('SELECT role FROM `users` WHERE `role` = "Super Administrator"'));
-        return view('auth.register',compact('user','rolef'));
+        return view('auth.register',compact('user'));
     }
 }

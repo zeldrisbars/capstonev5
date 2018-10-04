@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
 <!--===============================================================================================-->
+@toastr_css
 </head>
 <style>
     .container-login100
@@ -143,5 +144,8 @@
     <script src="{{asset('vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
     <script src="{{asset('js/main.js')}}"></script>
+@jquery
+@toastr_js
+@toastr_render
 </body>
 </html>
