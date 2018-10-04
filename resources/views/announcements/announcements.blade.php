@@ -61,7 +61,7 @@ $gg = $announcementnum;
         
       <div class="modal-body">
         <input type="hidden" name="id" id="id" value="{{$gg}}">
-        <p class="text-center">Are you sure to delete the content of this user?<br/> Actions will be made are not reversible? Please check first before to remove.</p>
+        <p class="text-center">Are you sure to delete the content? This action is not reversible?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
