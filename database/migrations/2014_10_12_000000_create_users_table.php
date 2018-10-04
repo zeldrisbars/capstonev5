@@ -19,7 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('role');
+            $table->string('role')->nullable();
+            $table->unsignedTinyInteger('is_super_admin')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

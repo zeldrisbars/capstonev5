@@ -22,7 +22,7 @@ protected function validator(array $request)
             'complainant' => 'required|string|max:255',
             'caseofincident' => 'required|string|max:255',
             'datetime' => 'required|string|max:255',
-            'detail' => 'required|string|max:255',
+            'detail' => 'required|max:4098',
             'status' => 'required|string|max:255',
         ]);
     }

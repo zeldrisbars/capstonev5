@@ -20,7 +20,7 @@ class CreateBlotter extends Migration
             $table->string('complainant');
             $table->string('datetime');
             $table->string('caseofincident');
-            $table->string('detail');
+            $table->text('detail');
             $table->string('status');
             $table->rememberToken();
             $table->timestamps();

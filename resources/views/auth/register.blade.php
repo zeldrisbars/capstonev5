@@ -70,7 +70,6 @@
                     @php
                     $no = $user;
                     $no++;
-                    $rolename = $rolef;
                     @endphp
                     <br />
                     
@@ -106,7 +105,7 @@
 
                     <div class="wrap-input100 validate-input" data-validate = "Role?">
                         <input class="input100" type="text" name="role" id="role" required>
-                        <span class="focus-input100" data-placeholder="Role? Type Super Administrator" ></span>
+                        <span class="focus-input100" data-placeholder="Role?" ></span>
                     </div>                    
                     
                    
