@@ -171,8 +171,8 @@ return [
             'icon'        => 'book',
         ],
         [
-            'text'        => 'Pending Resident',
-            'url'         => 'clerk/pendingresident',
+            'text'        => 'Inhabitant Resident',
+            'url'         => 'clerk/inhabitant',
             'icon'        => 'exclamation',
         ],
         [

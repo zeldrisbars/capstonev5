@@ -19,7 +19,7 @@
     <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="{{asset('vendor/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <link rel="icon" type="image/png" href="{{asset('images/favicon.ico')}}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
   <style>
     .form-group.required .control-label:after 

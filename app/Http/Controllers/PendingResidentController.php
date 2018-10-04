@@ -15,6 +15,6 @@ class PendingResidentController extends Controller
     public function index()
     {
     	$resident = Resident::all();
-        return view('clerk.pendingresident',compact('resident'));
+        return view('clerk.inhabitant',compact('resident'));
     }
 }

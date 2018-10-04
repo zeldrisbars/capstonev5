@@ -29,7 +29,7 @@ Route::get('clerk/addresident','AddResident@index');
 Route::resource('clerk/addresident','AddResident');
 Route::get('clerk/residentsearch','ResidentSearch@index');
 Route::get('clerk/nonresident', 'NonResidentController@index');
-Route::get('clerk/pendingresident','PendingResidentController@index');
+Route::get('clerk/inhabitant','PendingResidentController@index');
 Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
 Route::get('blotter/updateblotterrecord','UpdateBlotter@index');
 Route::get('/viewforms','DownloadForms@index')->name('viewforms');
