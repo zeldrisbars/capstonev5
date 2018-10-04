@@ -20,7 +20,19 @@ class AnnouncementList extends Controller
     }
     public function index()
     {
+        $announcementnum = Announcements::count('id');
         $announcements = Announcements::all();
-        return view('announcements.announcements',compact('announcements'));
+        return view('announcements.announcements',compact('announcements','announcementnum'));
+    }
+    public function destroy(Request $request)
+    {
+        $announcements = Announcements::findorFail($request->id);
+
+        $announcements->delete([
+            'id' => $request['id'],
+            'title' => $request['title'],
+            'description' => $request['description'],
+            ]);
+        return back();
     }
 }

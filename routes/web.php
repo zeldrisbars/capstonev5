@@ -23,6 +23,7 @@ Route::get('admin/datasync','DataBackupController@index')->name('datasync');
 Route::get('blotter/createblotter','CreateBlotterController@index');
 Route::resource('blotter/createblotter','CreateBlotterController');
 Route::get('bpinformation/announcements','AnnouncementList@index');
+Route::resource('bpinformation/announcements','AnnouncementList');
 Route::get('bpinformation/updateannouncements','UpdateAnnouncement@index');
 Route::resource('bpinformation/updateannouncements','UpdateAnnouncement');
 Route::get('clerk/addresident','AddResident@index');

@@ -10,7 +10,9 @@
           <li class ="active">Announcement List</li>
         </ol>
 <br />
-
+@php
+$gg = $announcementnum;
+@endphp
 <div class="col-md-12">
           <div class="box">
             <div class="box-header with-border bg-blue">
@@ -33,7 +35,7 @@
                     <td>{{$an->id}}</td>
                     <td>{{$an->title}}</td>
                     <td>{!!$an->description!!}</td>
-                    <td></td>
+                    <td><button type="button" class="btn bg-navy btn-flat margin" data-myid="{{$an->id}}"data-toggle="modal" data-target="#AnnouncementdeleteModal">Delete</button></td>
                   </tr>
                   @endforeach
               </tbody></table>
@@ -43,6 +45,31 @@
       </div>
           <!-- /.box -->
 
-
+<!--Delete Modal -->
+<!-- Modal -->
+<div class="modal modal-danger fade" id="AnnouncementdeleteModal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Delete Confirmation</h4>
+      </div>
+      <form action ="{{route('announcements.destroy','test')}}" method="post">
+        {{method_field('delete')}}
+        {{csrf_field()}}   
+        
+        
+      <div class="modal-body">
+        <input type="hidden" name="id" id="id" value="{{$gg}}">
+        <p class="text-center">Are you sure to delete the content of this user?<br/> Actions will be made are not reversible? Please check first before to remove.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
 
 @endsection
