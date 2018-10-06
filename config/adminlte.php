@@ -133,6 +133,14 @@ return [
 
         ],
         [
+        'header' => 'Blotter Module',
+        ],
+        [
+            'text'        => 'Blotter Reports',
+            'url'         => 'blotter/retrieveblotterrecord','blotter/createblotter','blotter/updateblotterrecord',
+            'icon'        => 'book',
+        ],
+        [
             'text'        => 'Database Backup/Restore',
             'url'         => 'admin/datasync',
             'icon'        => 'refresh',
@@ -171,28 +179,12 @@ return [
             'icon'        => 'book',
         ],
         [
-            'text'        => 'Inhabitant Resident',
+            'text'        => 'Inhabitant Household',
             'url'         => 'clerk/inhabitant',
             'icon'        => 'exclamation',
         ],
-        [
-        'header' => 'Blotter Module',
-        ],
-        [
-            'text'        => 'Create Blotter Report',
-            'url'         => 'blotter/createblotter',
-            'icon'        => 'plus',
-        ],
-        [
-            'text'        => 'Blotter Reports',
-            'url'         => 'blotter/retrieveblotterrecord',
-            'icon'        => 'search',
-        ],
-        [
-            'text'        => 'Update Blotter Report',
-            'url'         => 'blotter/updateblotterrecord',
-            'icon'        => 'exclamation',
-        ],
+        
+        
     ],
 
     /*

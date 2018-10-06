@@ -17,6 +17,9 @@
 <div class="box box-primary">
 <div class="box-header with-border bg-orange">
 	<h3 class="box-title">Initial Blotter Report</h3>
+	<div class="box-tools pull-right">
+        <a href="{{ url('/blotter/retrieveblotterrecord') }}" class="btn btn-xs btn-danger">Discard</a>
+      </div>
 	</div>
 	<form action="{{route('createblotter.store')}}" method="post">
 		{{csrf_field()}}

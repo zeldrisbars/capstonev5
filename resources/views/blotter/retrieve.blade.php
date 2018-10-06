@@ -19,7 +19,10 @@
 <div class="box">
 			<div class="box-header bg-orange">
 				<div class="box-title">Blotter Reports</div>
-			</div>
+			<div class="box-tools pull-right">
+        <a href="{{ url('/blotter/createblotter') }}" class="btn btn-xs btn-danger">Create Blotter Report</a>
+      </div>
+      </div>
 <div class="box-body">        
                <!-- /.box-header -->
             <div class="box-body no-padding">
@@ -41,7 +44,20 @@
                  <td>{{$bl->accused}}</td>
                  <td>{{$bl->caseofincident}}</td>
                  <td>{{$bl->detail}}</td>
-                 <td><span class="badge bg-red">{{$bl->status}}</span></td>
+                 <td>
+                  @if ($bl->status == "Pending")
+                   <span class="badge bg-red">{{$bl->status}}</span>
+                   @endif
+                   @if ($bl->status == "On-Going")
+                   <span class="badge bg-yellow">{{$bl->status}}</span>
+                   @endif
+                   @if ($bl->status == "Settled")
+                   <span class="badge bg-green">{{$bl->status}}</span>
+                   @endif
+                   @if ($bl->status == "File to Action")
+                   <span class="badge bg-red">{{$bl->status}}</span>
+                   @endif
+                 </td>
                 </tr>
                 @endforeach
               </tbody></table>
