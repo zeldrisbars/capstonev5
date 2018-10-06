@@ -44,6 +44,8 @@ public function store(Request $request)
 	'detail' => $request['detail'],
 	'status' => $request['status'],
 ]);
-	return back();
+    toastr()->success('Success!');
+    $blotter = CreateBlotter::all();
+	return view('blotter.retrieve',compact('blotter'));
 }
 }

@@ -1,7 +1,10 @@
 @extends('adminlte::page')
 
 @section('content')
- 
+@toastr_css
+@jquery
+@toastr_js
+@toastr_render
 
 <section class="content-header">
         <h1>
@@ -35,6 +38,7 @@
                   <th>Case</th>
                   <th>Description</th>
                   <th style="width: 40px">Status</th>
+                  <th style="width: 50px">Options</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -58,6 +62,7 @@
                    <span class="badge bg-red">{{$bl->status}}</span>
                    @endif
                  </td>
+                 <td><button type="button" class="btn bg-red btn-flat btn-sm margin">View and Update</button></td>
                 </tr>
                 @endforeach
               </tbody></table>
