@@ -31,7 +31,7 @@
 <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
-    <link href="{{ asset('css/toastr.css') }}" rel="stylesheet" type="css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 <!--===============================================================================================-->
 </head>
 <style>
@@ -147,7 +147,7 @@
     <script src="{{asset('vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
     <script src="{{asset('js/main.js')}}"></script>
-    <script src="{{  asset('js/toastr.js')  }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js"></script>
     <script>
   @if(Session::has('message'))
     var type = "{{ Session::get('alert-type', 'info') }}";
