@@ -27,7 +27,7 @@
 <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
-    
+    <link href="{{ asset('css/toastr.css') }}" rel="stylesheet" type="css">
 <!--===============================================================================================-->
 </head>
 @toastr_css
@@ -144,6 +144,7 @@
     <script src="{{asset('vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
     <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{  asset('js/toastr.js')  }}"></script>
 @jquery
 @toastr_js
 @toastr_render
