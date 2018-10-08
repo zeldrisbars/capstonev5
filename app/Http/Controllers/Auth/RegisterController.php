@@ -67,7 +67,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {  
-        if ($request['role'] == "Super Administrator")
+        if ($data['role'] == "Super Administrator")
         {   
             $notification = array(
     'message' => 'Please try again later!', 
