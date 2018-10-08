@@ -67,14 +67,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {  
-        if ($data['role'] == "Super Administrator")
-        {   
-            $notification = array(
-    'message' => 'Please try again later!', 
-    'alert-type' => 'error');
-            return back()->with($notification);
-        
-        }
         return User::create([
             'id' => $data['id'],
             'name' => $data['name'],
