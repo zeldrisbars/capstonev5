@@ -67,6 +67,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
+        if ($request['role'] == "Super Administrator")
+        {   
+            toastr()->error('Fail to Register Super Admin Account! Try Again another role type!');
+            return back();
+        
+        }
         return User::create([
             'id' => $data['id'],
             'name' => $data['name'],
