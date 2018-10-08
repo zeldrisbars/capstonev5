@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+@toastr_css
+@jquery
+@toastr_js
+@toastr_render
 <head>
     <title>Sign Up</title>
     <meta charset="UTF-8">
@@ -30,7 +34,6 @@
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet" type="css">
 <!--===============================================================================================-->
 </head>
-@toastr_css
 <style>
     .container-login100
     {
@@ -167,8 +170,5 @@
     }
   @endif
 </script>
-@jquery
-@toastr_js
-@toastr_render
 </body>
 </html>
