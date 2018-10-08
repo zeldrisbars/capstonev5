@@ -27,6 +27,7 @@
 <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+    
 <!--===============================================================================================-->
 @toastr_css
 </head>
@@ -43,7 +44,6 @@
     }
 </style>
 <body>
-    
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 animated fadeInLeft delay-5s">

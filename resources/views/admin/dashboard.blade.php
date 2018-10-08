@@ -131,7 +131,17 @@ $imba = $allres;
 </div>
 
    
+@if (Session::has('flash_notification.message'))
 
+    <script>
+        $(document).ready(function() {
+
+        toastr.{{ Session::get('flash_notification.level') }}
+        ('{{ Session::get('flash_notification.message') }}');
+
+        });
+    </script>
+    @endif
 </section>
 
 

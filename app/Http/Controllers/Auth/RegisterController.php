@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use DB;
-
+use Auth;
 class RegisterController extends Controller
 {
     /*
@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -67,13 +67,7 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
-        if ($data['role'] == "Super Administrator")
-        {   
-            return view ('auth.register');
-        }
-        else
-        {
+    {   
         return User::create([
             'id' => $data['id'],
             'name' => $data['name'],
@@ -82,7 +76,6 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'role' => $data['role'],  
         ]);
-    }
     }
 public function index()
     {

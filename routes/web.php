@@ -35,5 +35,7 @@ Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
 Route::get('blotter/updateblotterrecord','UpdateBlotter@index');
 Route::get('/viewforms','DownloadForms@index')->name('viewforms');
 Route::get('barangayclearance/print','PdfController@index');
+// Exception routes
+Route::get('exception/index', 'ExceptionController@index');
 
 
