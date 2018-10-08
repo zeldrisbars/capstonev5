@@ -68,6 +68,9 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                     @endif
+                    @if(Session::has('message'))
+                    <label>Account Exist!</label>
+                    @endif
                         </span>
                     </div>
                     <br /><br />
