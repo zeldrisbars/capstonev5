@@ -29,8 +29,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     
 <!--===============================================================================================-->
-@toastr_css
 </head>
+@toastr_css
 <style>
     .container-login100
     {
