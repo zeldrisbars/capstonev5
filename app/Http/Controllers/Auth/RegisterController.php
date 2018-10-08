@@ -78,31 +78,7 @@ class RegisterController extends Controller
     }
 public function index()
     {
-        $notification = array(
-    'message' => 'Fail to Register Super Admin Account! Please try again later!', 
-    'alert-type' => 'error'
-);
-     @if(Session::has('message'))
-    var type = "{{ Session::get('alert-type', 'info') }}";
-    switch(type){
-        case 'info':
-            toastr.info("{{ Session::get('message') }}");
-            break;
-        
-        case 'warning':
-            toastr.warning("{{ Session::get('message') }}");
-            break;
-
-        case 'success':
-            toastr.success("{{ Session::get('message') }}");
-            break;
-
-        case 'error':
-            toastr.error("{{ Session::get('message') }}");
-            break;
-    }
-  @endif
         $user = User::count('id');
-        return view('auth.register',compact('user')->with($notification));
+        return view('auth.register',compact('user'));
     }
 }
