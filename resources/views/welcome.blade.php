@@ -54,6 +54,10 @@ background-color: orange;
 .navbar
 {
   display: flex;
+  background-color: darkgreen;
+  -webkit-box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
+-moz-box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
+box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
 }
 .navbar-toggler
 {
@@ -65,7 +69,7 @@ background-color: orange;
 
 <body id="page-top">
 <!--Nav -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top animated fadeIn" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top animated fadeIn" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Barangay Guyong</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="">
