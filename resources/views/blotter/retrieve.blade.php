@@ -92,7 +92,7 @@
         @endphp
         
       <div class="modal-body" style="overflow-y: scroll;">
-        <input type="hidden" name="id" id="id" value="{{$count}}">
+        <input type="hidden" name="id" id="id">
       
       <div class="form-group">
                   <label for="name">Control No.</label>

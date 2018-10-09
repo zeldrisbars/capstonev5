@@ -13,9 +13,9 @@ class RetrieveBlotter extends Controller
     }
     public function index()
     {
-        $bcount = CreateBlotter::count('id');
+        
     	$blotter = CreateBlotter::all();
-        return view('blotter.retrieve',compact('blotter','bcount'));
+        return view('blotter.retrieve',compact('blotter'));
     } 
 
 }
