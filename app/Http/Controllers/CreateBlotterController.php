@@ -48,4 +48,19 @@ public function store(Request $request)
     $blotter = CreateBlotter::all();
 	return view('blotter.retrieve',compact('blotter'));
 }
+public function update(Request $request)
+{
+$blotter = CreateBlotter::all();
+
+        $blotter = CreateBlotter::findorFail($request->id);
+        $blotter->update([
+            'id' => $request['id'],
+            'controlno' => $request['controlno'],
+            'accused' => $request['accused'],
+            'caseofincident' => $request['caseofincident'],
+            'detail' => $request['detail'],
+            'status' => $request['status'],
+            ]);
+        return back();
+}
 }

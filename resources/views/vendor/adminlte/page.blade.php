@@ -29,6 +29,11 @@
    color:red;
    position: absolute;
 }
+.modal{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.wrapper{height:100%;position:relative;overflow-x:hidden;overflow-y:hidden}
   </style>
     @stack('css')
     @yield('css')
@@ -240,6 +245,29 @@
   modal.find('.modal-body #e_id').val(e_id)
 })
 
+$('#blotterupdateModal').on('show.bs.modal', function (event) {
+  console.log('Modal Opened')
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var id = button.data('myid')
+  var controlno = button.data('mycontrolno')
+  var accused = button.data('myaccused')
+  var caseofincident = button.data('mycaseofincident')
+  var detail = button.data('mydetail')
+  var status = button.data('mystatus')
+   // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('Update Blotter Status')
+  modal.find('.modal-body #id').val(id)
+  modal.find('.modal-body #controlno').val(controlno)
+  modal.find('.modal-body #accused').val(accused)
+  modal.find('.modal-body #caseofincident').val(caseofincident)
+  modal.find('.modal-body #detail').val(detail)
+  modal.find('.modal-body #status').val(status)
+  
+})
+
 $('#deleteModal').on('show.bs.modal', function (event) {
     console.log('Modal Opened')
   var button = $(event.relatedTarget) // Button that triggered the modal
@@ -325,11 +353,11 @@ $('#AnnouncementdeleteModal').on('show.bs.modal', function (event) {
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
+      'lengthChange': true,
+      'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : true
     })
   })
 
@@ -342,6 +370,9 @@ $('#AnnouncementdeleteModal').on('show.bs.modal', function (event) {
     })
 $(function () {
 $('#description').wysihtml5()
+})
+$('#blotterupdateModal').on('hidden.bs.modal', function () {
+ location.reload();
 })
   </script>
     @stack('js')

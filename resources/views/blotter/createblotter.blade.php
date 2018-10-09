@@ -58,7 +58,7 @@
 	</div>
 	<div class="form-group required">
 	<label class="control-label" for="details">Tell the Incident and the Problem</label>
-	<textarea class="form-control" rows="5" name="detail" id="details" placeholder="Please type the details." required="required"></textarea>
+	<textarea class="form-control" rows="5" name="detail" id="detail" placeholder="Please type the details." required="required"></textarea>
 	</div>
 	<div class="form-group required">
 	<label class="control-label" for="status">Status</label>

@@ -1,5 +1,4 @@
 @extends('adminlte::page')
-
 @section('content')
 @toastr_css
 @jquery
@@ -17,8 +16,8 @@
         </ol>
 <br />
 
-<div class="container-fluid">
-<div class="col-xs-12">
+<div class="container">
+<div class="col-md-11">
 <div class="box">
 			<div class="box-header bg-orange">
 				<div class="box-title">Blotter Reports</div>
@@ -30,7 +29,7 @@
                <!-- /.box-header -->
             <div class="box-body no-padding">
             	 
-              <table id="example1" class="table table-bordered">
+              <table id="example2" class="table table-responsive">
                 <thead>
                   <tr>
                   <th style="width: 10px">#</th>
@@ -62,18 +61,71 @@
                    <span class="badge bg-red">{{$bl->status}}</span>
                    @endif
                  </td>
-                 <td><button type="button" class="btn bg-red btn-flat btn-sm margin">View and Update</button></td>
+                 <td><button class="btn bg-red btn-flat btn-sm margin" data-myid="{{$bl->id}}" data-toggle="modal"data-target="#blotterupdateModal" data-mycontrolno ="{{$bl->controlno}}" data-myaccused="{{$bl->accused}}" data-mydetail="{{$bl->detail}}" data-mycaseofincident="{{$bl->caseofincident}}" data-mystatus="{{$bl->status}}">View and Update</button></td>
                 </tr>
                 @endforeach
               </tbody></table>
             </div>
             <!-- /.box-body -->
-          </div>
+         </div>
           <!-- /.box -->
 	
 </div>
-
+</div>
 </div>
 
+&nbsp
+<!--Edit Modal -->
+<!-- Modal -->
+<div class="modal modal-warning fade" id="blotterupdateModal" tabindex="2" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+        <h4 class="modal-title" id="myModalLabel">Edit User</h4>
+      </div>
+      <form action ="{{route('createblotter.update','test')}}" method="post">
+        {{method_field('patch')}}
+        {{csrf_field()}}   
+        
+        
+      <div class="modal-body" style="overflow-y: scroll;">
+        <input type="hidden" name="id" id="id" value="{{$bl->id}}">
+      
+      <div class="form-group">
+                  <label for="name">Control No.</label>
+                  <input type="text" class="form-control" placeholder="Control #" name="controlno" id="controlno">
+                </div>
+      
+                  <div class="form-group">
+                  <label for="name">Name of Accused</label>
+                  <input type="text" class="form-control" placeholder="Enter Name" name="accused" id="accused">
+                </div>
+                <div class="form-group">
+                  <label for="name">Case of Incident</label>
+                  <input type="text" class="form-control" placeholder="Incident Title" name="caseofincident" id="caseofincident">
+                </div>
+                <div class="form-group">
+                  <label for="name">Description</label>
+                  <textarea class="form-control" rows="5" name="detail" id="detail" placeholder="Please type the details."></textarea>
+                </div>
+                <div class="form-group">
+                <label>Status</label>
+  <select name="status" id="status" class="form-control">
+    <option>Pending</option>
+    <option>On-Going</option>
+    <option>Settled</option>
+    <option>File to Action</option>
+  </select>
+  </div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info">Save Changes</button>
+      </div>
+    </form>
+    </div>
+  </div>
 </div>
-@endsection
+&nbsp
+@stop
