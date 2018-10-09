@@ -22,7 +22,7 @@
 
             </div>
             <!-- /.box-header -->
-            <form action="{{route('addresident.store')}}" method="post">
+            <form action="{{route('addresident.store')}}" method="post" files="true" enctype="multipart/form-data">
             	{{csrf_field()}}
             <div class="box-body">
             	@php
@@ -30,85 +30,111 @@
             	$no++;
             	@endphp
             <input type="hidden" name="id" id="id" value="{{$no}}">
-              <table class="table table-bordered">
-              	<label>Please type the required fields</label>
-              	<h4><br />Information About Yourself</h4>
-                <tbody>
-               	<tr>
-                 <th>Last Name
-				<td><input type="text" name="lastname" id="lastname" class="form-control" required></td>
-                 </th>
-                 <th>First Name
-                 	<td><input type="text" name="firstname" id="firstname" class="form-control"></td>
-                 </th>
-                 <th>Middle Name</th>
-                 <td><input type="text" name="middlename" id="middlename" class="form-control"></td>
-                </tr>
-                <tr>
-                	<th>Gender
-					<td><select name="gender" id="gender" class="form-control">
+            <br />
+            <label><strong>Take Note:&nbsp;</strong>Please Type the Required Fields</label>
+            <h3>Personal Information</h3>
+            <div class="container-fluid">
+            	<div class="col-md-12">
+            	<label class="pull-right">Photo Upload(at least 2x2 Picture)</label><br />
+            </div>
+<div class="col-md-12">
+<div class="col-md-3">
+	<label>Last Name</label>
+	<input type="text" name="lastname" id="lastname" class="form-control" required>
+</div>
+<div class="col-md-3">
+<label>First Name</label>	
+<input type="text" name="firstname" id="firstname" class="form-control">
+</div>
+<div class="col-md-3">
+<label>Middle Name</label>
+<input type="text" name="middlename" id="middlename" class="form-control">
+</div>
+<div class="col-md-3">
+<center><img class="img-responsive pull-right" id="pic" src="{{ asset('images/steve.jpg')}}" width="300px" style="max-width:200px; background-size: contain"></center><input type="file" name="image" class="form-control-file" onChange="readURL(this)" id="exampleInputFile" aria-describedBy="fileHelp">
+<br/>
+</div>
+</div>
+
+
+
+<div class="row">
+<div class="col-md-3">
+	<label>Gender</label>
+	<select name="gender" id="gender" class="form-control">
 						<option>Male</option>
 						<option>Female</option>
-					</select></td>
-                	</th>
-                	<th>Civil Status
-					<td><select name="civil" id="civil" class="form-control">
+					</select>
+</div>
+<div class="col-md-3">
+	<label>Civil Status</label>
+	<select name="civil" id="civil" class="form-control">
 						<option>Single</option>
 						<option>Married</option>
 						<option>Widowed</option>
-						<option>Separated</option>
-					</select></td>
-                	</th>
-                	<th>Age
-                	<td><input type="text" name="age" id="age" class="form-control"></td>
-                	</th>
-                </tr>
-                <tr>
-                	<th>Birth Date
-					<td><input type="text" name="birthdate" id="birthdate" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask></td>
-                	</th>
-                	<th>Current Voters Precinct Number
-                		<td><input type="text" name="votersno" id="votersno" class="form-control"></td>
-                	</th>
-                	<th>Years of Residency in Guyong
-                		<td><input type="text" name="yearsres" id="yearsres" class="form-control"></td>
-                	</th>
-                </tr>
-               <tr><td><h4>Address</h4></td></tr>
-				<tr>
-					<th>Street
-					<td><input type="text" name="street" id="street" class="form-control"></td>
-					</th>
-					<th>Barangay
-						<td>
-							<select name="barangay" id="barangay" class="form-control">
+						<option>Legally Separated</option>
+	</select>
+</div>
+<div class="col-md-3">
+	<label>Birth Date</label>
+	<input type="text" name="birthdate" id="birthdate" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
+	</div>
+	<div class="col-md-3">
+		<label>Age</label>
+		<input type="text" name="age" id="age" class="form-control" value="">
+	<br />
+	</div>
+</div>
+
+<div class="row">
+<div class="col-md-3">
+<label>Voters Precinct Number</label>
+	<input type="text" name="votersno" id="votersno" class="form-control">
+</div>
+<div class="col-md-3">
+	<label>Years of Residency in Guyong</label>
+	<input type="text" name="yearsres" id="yearsres" class="form-control">
+	<br>
+	</div>
+</div>
+<hr>
+
+<h3>Address</h3>
+<div class="row">
+<div class="col-md-3">
+<label>Street</label>
+<input type="text" name="street" id="street" class="form-control">
+</div>
+<div class="col-md-3">
+<label>Barangay</label>
+<select name="barangay" id="barangay" class="form-control">
 								<option>Guyong</option>
-							</select>
-						</td>
-					</th>
-					<th>City/Province
-					<td>
-						<select name="cityprovince" id="cityprovince" class="form-control">
+</select>
+	</div>
+<div class="col-md-3">
+<label>Municipal/City</label>
+<select name="cityprovince" id="cityprovince" class="form-control">
 							<option>Santa Maria</option>
 						</select>
-					</td>
-					</th>
-				</tr>
-				<tr>
-					<th>Province
-				<td>
-					<select name="province" id="province" class="form-control">
+</div>
+<div class="col-md-3">
+<label>Province</label>
+	<select name="province" id="province" class="form-control">
 						<option>Bulacan</option>
 					</select>
-				</td>
-			</th>
+	<br>
+	</div>
+</div>
 
-					<th>Zip Code
-					<td><input type="text" name="zipcode" id="zipcode" class="form-control"></td>
-					</th>
-				<th>Sitio
-					<td>
-						<select name="sitio" id="sitio" class="form-control">
+<div class="row">
+<div class="col-md-3">
+<label>Zip Code</label>
+<input type="text" name="zipcode" id="zipcode" class="form-control">
+<br />
+</div>
+<div class="col-md-3">
+<label>Sitio</label>
+<select name="sitio" id="sitio" class="form-control">
 							<option>|CHOOSE SITIO|</option>
 							<option>M. SANTOS/ MALAWAK</option>
 							<option>BATO</option>
@@ -121,38 +147,46 @@
 							<option>MATANG TUBIG/LOTE</option>
 							<option>CELESTE</option>
 						</select>
-					</td>
-					</th>
+	</div>
 
-				</tr>
-				<tr><td><h4>Parents Information</h4></td></tr>
-				<tr>
-					<th>Mother's Last Name
-					<td><input type="text" name="mlast" id="mlast" class="form-control"></td>
-					</th>
-					<th>Mother's First Name
-					<td><input type="text" name="mfirst" id="mfirst" class="form-control"></td>
-					</th>
-					<th>Mother's Middle Name
-					<td><input type="text" name="mmiddle" id="mmiddle" class="form-control"></td>
-					</th>
-				</tr>
+	</div>
+	
+	<hr>
+ <h3>Parents Information</h3>
+ <br>
 
-				<tr>
-					<th>Father's Last Name
-					<td><input type="text" name="flast" id="flast" class="form-control"></td>
-					</th>
-					<th>Father's First Name
-						<td><input type="text" name="ffirst" id="ffirst" class="form-control"></td>
-					</th>
-					<th>Father's Middle Name
-						<td><input type="text" name="fmiddle" id="fmiddle" class="form-control"></td>
-					</th>
-				</tr>
-				
-				
-              </tbody>
-          </table>
+ <div class="row">
+ 	<div class="col-md-4">
+ 		<label>Mother's Last Name</label>
+ 	<input type="text" name="mlast" id="mlast" class="form-control">
+ 	<br />
+ 	</div>
+ 	<div class="col-md-4">
+ 	<label>Mother's First Name</label>
+ 	<input type="text" name="mfirst" id="mfirst" class="form-control">
+ 	</div>
+ 	<div class="col-md-4">
+ 		<label>Mother's Middle Name</label>
+ 		<input type="text" name="mmiddle" id="mmiddle" class="form-control">
+ 	</div>
+ </div>
+
+ <div class="row">
+<div class="col-md-4">
+	<label>Father's Last Name</label>
+	<input type="text" name="flast" id="flast" class="form-control">
+	<br>
+</div>
+<div class="col-md-4">
+	<label>Father's First Name</label>
+	<input type="text" name="ffirst" id="ffirst" class="form-control">
+	</div>
+	<div class="col-md-4">
+		<label>Father's Middle Name</label>
+	<input type="text" name="fmiddle" id="fmiddle" class="form-control">
+	</div>
+ </div>
+
             </div>
             <!-- /.box-body -->
           

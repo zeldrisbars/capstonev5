@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Resident;
 use Illuminate\Support\Facades\Validator;
 use Gate;
+use Illuminate\Validation\Rule;
+use DB;
 class AddResident extends Controller
 {
     public function __construct()
@@ -21,6 +23,7 @@ class AddResident extends Controller
             'middlename' => 'required|string|max:255',
             'gender' => 'required|string|max:255',
             'civil' => 'required|string|max:255',
+            'image' => 'image|mimes:jpeg,png,jpg,svg',
             'age' => 'required|string|max:255',
             'birthdate' => 'required|string|max:255',
             'votersno' => 'required|string|max:255',
@@ -48,30 +51,46 @@ class AddResident extends Controller
     }
     public function store(Request $request)
     {
-    	Resident::create([
-    		'id' => $request['id'],
-    		'lastname' => $request['lastname'],
-    		'firstname' => $request['firstname'],
-    		'middlename' => $request['middlename'],
-    		'gender' => $request['gender'],
-    		'civil' => $request['civil'],
-    		'age' => $request['age'],
-    		'birthdate' => $request['birthdate'],
-    		'votersno' => $request['votersno'],
-    		'yearsres' => $request['yearsres'],
-    		'street' => $request['street'],
-    		'barangay' => $request['barangay'],
-    		'cityprovince' => $request['cityprovince'],
-    		'province' => $request['province'],
-    		'zipcode' => $request['zipcode'],
+        
+                $file = $request->file('image');
+                $pic = "";
+                if($file == '' || $file == null){
+                    $pic = "images/steve.jpg";
+                }
+                else
+                {
+                    $date = date("Ymdhis");
+                    $extension = $request->file('image')->getClientOriginalExtension();
+                    $pic = "images/".$date.'.'.$extension;
+                    $request->file('image')->move("images",$pic);
+                }
+                    // $request->file('photo')->move(public_path("/uploads"), $newfilename);
+            Resident::create([
+            'id' => $request['id'],
+            'lastname' => $request['lastname'],
+            'firstname' => $request['firstname'],
+            'middlename' => $request['middlename'],
+            'image' => $pic,
+            'gender' => $request['gender'],
+            'civil' => $request['civil'],
+            'age' => $request['age'],
+            'birthdate' => $request['birthdate'],
+            'votersno' => $request['votersno'],
+            'yearsres' => $request['yearsres'],
+            'street' => $request['street'],
+            'barangay' => $request['barangay'],
+            'cityprovince' => $request['cityprovince'],
+            'province' => $request['province'],
+            'zipcode' => $request['zipcode'],
             'sitio' => $request['sitio'],
-    		'mlast' => $request['mlast'],
-    		'mfirst' => $request['mfirst'],
-    		'mmiddle' => $request['mmiddle'],
-    		'flast' => $request['flast'],
-    		'ffirst' => $request['ffirst'],
-    		'fmiddle' => $request['fmiddle'],
-		]);
-		return back(); 
+            'mlast' => $request['mlast'],
+            'mfirst' => $request['mfirst'],
+            'mmiddle' => $request['mmiddle'],
+            'flast' => $request['flast'],
+            'ffirst' => $request['ffirst'],
+            'fmiddle' => $request['fmiddle'],
+        ]); 
+    return back();
     }
+    
 }

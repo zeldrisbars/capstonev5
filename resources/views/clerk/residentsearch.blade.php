@@ -26,6 +26,7 @@
                 <thead>
                   <tr>
                   <th style="width: 10px">#</th>
+                  <th style="width: 100px">Image</th>
                   <th>Name</th>
                   <th>Sitio</th>
                   <th>Precinct #</th>
@@ -35,6 +36,7 @@
                 @foreach($resident as $re)
                 <tr>
                  <td>{{$re->id}}</td>
+                 <td><img src="{{asset($re->image)}}" width="100px" style="max-width:100px;"></td>
                  <td>{{$re->lastname}}, {{$re->firstname}}&nbsp{{$re->middlename}}</td>
                  <td>{{$re->sitio}}</td>
                  <td>{{$re->votersno}}</td>

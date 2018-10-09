@@ -17,6 +17,7 @@ class Resident extends Migration
             $table->string('lastname');
             $table->string('firstname');
             $table->string('middlename');
+            $table->string('image');
             $table->string('gender');
             $table->string('civil');
             $table->string('age');

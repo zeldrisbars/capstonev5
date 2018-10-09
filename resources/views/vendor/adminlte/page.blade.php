@@ -374,6 +374,36 @@ $('#description').wysihtml5()
 $('#blotterupdateModal').on('hidden.bs.modal', function () {
  location.reload();
 })
+function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $('#pic')
+                            .attr('src', e.target.result)
+                            .width(300)
+                            .height(200);
+                        };
+                    reader.readAsDataURL(input.files[0]);
+                }
+                }
+$('#birthdate').on('change',function(){
+            today = new Date();
+            birthDate = new Date($('#birthdate').val());
+            age = today.getFullYear() - birthDate.getFullYear();
+            m = today.getMonth() - birthDate.getMonth();
+            if(birthDate >= today)
+            {
+                alert('Invalid Birthdate');
+            }
+            else
+            {
+                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
+                {
+                    age--;
+                }
+                $('#age').val(age);
+            }
+        });
   </script>
     @stack('js')
     @yield('js')
