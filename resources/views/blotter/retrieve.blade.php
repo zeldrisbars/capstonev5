@@ -87,10 +87,12 @@
       <form action ="{{route('createblotter.update','test')}}" method="post">
         {{method_field('patch')}}
         {{csrf_field()}}   
-        
+        @php
+        $count = $bcount;
+        @endphp
         
       <div class="modal-body" style="overflow-y: scroll;">
-        <input type="hidden" name="id" id="id" value="{{$bl->id}}">
+        <input type="hidden" name="id" id="id" value="{{$count}}">
       
       <div class="form-group">
                   <label for="name">Control No.</label>
