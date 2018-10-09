@@ -64,6 +64,12 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
   border-radius: 0;
   border-width: 0;
 }
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev 
+{
+  display: flex;
+}
 </style>
 </head>
 
@@ -97,20 +103,45 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
     </div>
     </nav>
 
-<div class="parallax bgimg1 animated  slideInLeft delay-2s">
-<header class="masthead text-white text-center" id="home">
-      <div class="overlay"></div>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Welcome to Barangay Guyong!</h1>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <h3>Barangay Guyong Official Webpage</h3>
-          </div>
-        </div>
-      </div>
-    </header>
+      <div id="home">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" style="min-height: 340px; max-height: 700px;">
+    <div class="carousel-item active" style="min-height: 320px; max-height: 680px;">
+      <img class="d-block w-100" src="{{ asset('images/Guyong BFinal.png') }}" alt="First slide">
+    <div class="carousel-caption d-none d-md-block">
+    <h3>Welcome to Barangay Guyong!</h3>
+    <p>We here to inform the happenings!</p>
+  </div>
+    </div>
+    <div class="carousel-item" style="min-height: 320px; max-height: 680px;">
+      <img class="d-block w-100" src="{{ asset('images/Guyong BG2.png') }}" alt="Second slide">
+    <div class="carousel-caption d-none d-md-block">
+    <h3>Read the requirements that you need!</h3>
+    <p>Before you going to the Barangay Hall!</p>
+  </div>
+    </div>
+    <div class="carousel-item" style="min-height: 320px; max-height: 680px;">
+      <img class="d-block w-100" src="{{ asset('images/Guyong BG2.png') }}" alt="Third slide">
+    <div class="carousel-caption d-none d-md-block">
+    <h3>Announcements will be see here!</h3>
+    <p>You can read it online!</p>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 </div>
 <!-- Masthead 
     <header class="masthead text-white text-center" id="home">
