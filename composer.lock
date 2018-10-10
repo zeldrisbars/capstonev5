@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0569fd497fc16d51fff382fdb557fa8a",
+    "content-hash": "51940a0f07d263f18e74e57dfbce426a",
     "packages": [
         {
             "name": "arcanedev/log-viewer",
@@ -127,6 +127,7 @@
             ],
             "time": "2018-02-08T00:42:15+00:00"
         },
+        
         {
             "name": "barryvdh/laravel-dompdf",
             "version": "v0.8.3",
@@ -605,6 +606,7 @@
             ],
             "time": "2018-02-07T20:20:57+00:00"
         },
+        
         {
             "name": "guzzlehttp/psr7",
             "version": "1.4.2",
