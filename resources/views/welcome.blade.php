@@ -87,13 +87,13 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
         <a class="nav-link js-scroll-trigger" href="#home">Home</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="#announcements">Announcements</a>
         </li>
         <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="#contacts">Contacts</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="nav-item">
         <a class="btn btn-flat btn-warning" href="{{ route('login') }}">Sign In</a>
@@ -179,20 +179,6 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
       </div>
     </section>
 --->
-<section id="about" class="testimonials animated slideInRight bg-orange">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-          <img src="{{ asset('images/Guyong Logo 3.png') }}" style="opacity: 0.95">
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <h2>About Barangay Guyong</h2>
-            <p class="lead">Barangay Guyong is one of the twenty-four(24) barangays comprising the municipality of Santa Maria, Bulacan, in the Philippines. It is bordered by Barangay Sta. Clara on the south-west, Poblacion on the south, Balasing and Pulong Buhangin on the east, San Jose Patag in the south-east, Caysio on the north, and Barangay Manggahan and Sta. Cruz on the west.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
 <div class="parallax bgimg2 animated slideInRight">
 <header class="masthead text-white text-right" id="announcements">
@@ -236,8 +222,9 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
       <br />
       <div class="row">
       <h5>
-      <i class="fab fa-facebook fa-2x fa-fw"></i>
+      <i class="fab fa-facebook fa-2x fa-fw"></i><a href="https://www.facebook.com/guyong.proper.5">
       | https://www.facebook.com/guyong.proper.5
+      </a>
       </h5>
     </div>
     <br />
@@ -257,6 +244,19 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
     </div>
   </div>
 </section>
+<section id="about" class="testimonials animated slideInRight bg-orange">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+          <img src="{{ asset('images/Guyong Logo 3.png') }}" style="opacity: 0.95">
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <h2>About Barangay Guyong</h2>
+            <p class="lead">Barangay Guyong is one of the twenty-four(24) barangays comprising the municipality of Santa Maria, Bulacan, in the Philippines. It is bordered by Barangay Sta. Clara on the south-west, Poblacion on the south, Balasing and Pulong Buhangin on the east, San Jose Patag in the south-east, Caysio on the north, and Barangay Manggahan and Sta. Cruz on the west.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 <!----Footer-->
 <footer class="footer bg-dark static-bottom animated fadeIn">
 <div class="container">

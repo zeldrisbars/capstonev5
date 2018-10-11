@@ -98,7 +98,7 @@
 	</div>
 	<div class="col-md-3">
 <label>Citizenship</label>
-<select name="Citizenship" id="Citizenship" class="form-control">
+<select name="citizenship" id="citizenship" class="form-control">
 								<option>Filipino</option>
 								<option>Foreigner</option>
 </select>
@@ -196,8 +196,26 @@
 		<label>Father's Middle Name</label>
 	<input type="text" name="fmiddle" id="fmiddle" class="form-control">
 	</div>
+ <br />
  </div>
-
+<hr>
+<h3>Household Information</h3>
+            <div class="col-md-3">
+            <label>Household Number</label>
+            <input type="text" name="hno" id="hno" class="form-control">
+            </div>
+            <div class="col-md-3">
+            <label>Household Relationship</label>
+            <input type="text" name="hrel" id="hrel" class="form-control">
+            </div>
+            <div class="col-md-3">
+            <label>Number of Siblings</label>
+            <input type="text" name="sib" id="sib" class="form-control">
+            </div>
+            <div class="col-md-3">
+            	<label>Salary Amount on then Family</label>
+            <input type="text" name="sal" id="sal" class="form-control">	
+            </div>
             </div>
             <!-- /.box-body -->
           

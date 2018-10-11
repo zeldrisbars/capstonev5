@@ -38,6 +38,10 @@ class Resident extends Migration
             $table->string('fmiddle');
             $table->string('citizenship');
             $table->string('religion');
+            $table->string('hno');
+            $table->string('hrel');
+            $table->string('sib');
+            $table->string('sal');
             $table->rememberToken();
             $table->timestamps();
         });
