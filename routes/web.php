@@ -14,9 +14,8 @@
 Route::get('/','Welcome@index');
 Auth::routes();
 //Admin
-Route::group(['middleware' => 'App\Http\Middleware\adminMiddleware'], function () {
-
 Route::get('/register','Auth\RegisterController@index')->name('register');
+Route::group(['middleware' => 'App\Http\Middleware\adminMiddleware'], function () {
 Route::get('/home','HomeController@index')->name('home');
 Route::get('/admin/dashboard','AdminController@index')->name('dashboard');
 Route::get('/admin/ticket','TicketController@index')->name('ticket');
