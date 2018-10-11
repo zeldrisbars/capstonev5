@@ -8,7 +8,7 @@
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li>Resident Module</li>
-        <li class="active">Inhabitant Resident</li>
+        <li class="active">Inhabitant Household</li>
       </ol>
 
 <br /><br />

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Events\Registered;
 class RegisterController extends Controller
 {
     /*
@@ -20,7 +22,6 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-
 
     /**
      * Where to redirect users after registration.
@@ -94,6 +95,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'role' => $data['role'],  
         ]);
+    }
+    protected function guard()
+    {
+        return Auth::guard();
+    }
+    public function showRegistrationForm()
+    {
+        return view('auth.register');
     }
 public function index()
     {

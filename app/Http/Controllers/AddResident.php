@@ -39,7 +39,9 @@ class AddResident extends Controller
             'mmiddle' => 'required|string|max:255',
             'flast' => 'required|string|max:255',
             'ffirst' => 'required|string|max:255',
-            'fmiddle' => 'required|string|max:255',     
+            'fmiddle' => 'required|string|max:255',    
+            'citizenship' => 'required|string|max:255',
+            'religion' => 'required|string|max:255',         
         ]);
     }
 
@@ -89,6 +91,9 @@ class AddResident extends Controller
             'flast' => $request['flast'],
             'ffirst' => $request['ffirst'],
             'fmiddle' => $request['fmiddle'],
+            'citizenship' => $request['citizenship'],
+            'religion' => $request['religion'],
+
         ]); 
     return back();
     }

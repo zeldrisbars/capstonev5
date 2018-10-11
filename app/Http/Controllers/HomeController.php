@@ -8,6 +8,7 @@ use App\CreateBlotter;
 use App\Resident;
 use App\Announcements;
 use Gate;
+use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
     /**
@@ -27,6 +28,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if (Auth::user()->role == "Citizen")
+        {
+            return redirect('citizen/citizenhome');
+        }
         toastr()->success('Successfully Logged In!');
         $announcement = Announcements::count('id');
         $blotter = CreateBlotter::count('id');

@@ -36,6 +36,8 @@ class Resident extends Migration
             $table->string('flast');
             $table->string('ffirst');
             $table->string('fmiddle');
+            $table->string('citizenship');
+            $table->string('religion');
             $table->rememberToken();
             $table->timestamps();
         });

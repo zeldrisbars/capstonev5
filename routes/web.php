@@ -14,6 +14,8 @@
 Route::get('/','Welcome@index');
 Auth::routes();
 //Admin
+Route::group(['middleware' => 'App\Http\Middleware\adminMiddleware'], function () {
+
 Route::get('/register','Auth\RegisterController@index')->name('register');
 Route::get('/home','HomeController@index')->name('home');
 Route::get('/admin/dashboard','AdminController@index')->name('dashboard');
@@ -34,7 +36,11 @@ Route::get('clerk/inhabitant','PendingResidentController@index');
 Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
 Route::get('/viewforms','DownloadForms@index')->name('viewforms');
 Route::get('barangayclearance/print','PdfController@index');
+});
 // Exception routes
 Route::get('exception/index', 'ExceptionController@index');
 
 
+Route::group(['middleware' => 'App\Http\Middleware\citizenMiddleware'], function () {
+Route::get('/citizen/citizenhome','CitizenHome@index');
+});

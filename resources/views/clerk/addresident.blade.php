@@ -96,6 +96,17 @@
 	<input type="text" name="yearsres" id="yearsres" class="form-control">
 	<br>
 	</div>
+	<div class="col-md-3">
+<label>Citizenship</label>
+<select name="Citizenship" id="Citizenship" class="form-control">
+								<option>Filipino</option>
+								<option>Foreigner</option>
+</select>
+	</div>
+	<div class="col-md-3">
+<label>Religion</label>
+<input type="text" name="religion" id="religion" class="form-control">
+	</div>
 </div>
 <hr>
 

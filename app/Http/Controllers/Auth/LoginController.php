@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     /*
@@ -20,7 +21,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+   
+    /*protected $redirectTo = '/';*/
     /**
      * Login username to be used by the controller.
      *
@@ -56,4 +58,29 @@ class LoginController extends Controller
     {
         return $this->username;
     }
+
+    public function redirectPath()
+    {
+         if ( Auth::user()->role == "Super Administrator")
+        {   
+        if (method_exists($this, 'redirectTo')) {
+            return $this->redirectTo();
+        }
+ 
+        return property_exists($this, 'redirectTo') ? $this->redirectTo : '/home';
+        
+        }
+
+        if (Auth::user()->role == "Citizen")
+        {   
+        if (method_exists($this, 'redirectTo')) {
+            return $this->redirectTo();
+        }
+ 
+        return property_exists($this, 'redirectTo') ? $this->redirectTo : '/citizen/citizenhome';
+        
+        }
+    }
+    
 }
+
