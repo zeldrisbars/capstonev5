@@ -20,7 +20,7 @@ class citizenMiddleware
         if (Auth::guard($guard)->check()) {
 
             if($request->user()->Role == 'Citizen'){
-                return redirect('/citizen/citizenhome');
+                return redirect('citizen/citizenhome');
             }
            
                 return $next($request);
