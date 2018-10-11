@@ -34,31 +34,37 @@ $imba = $allres;
 @endphp
     <div class="col-md-4 animated fadeIn">
       <div class="info-box">
+        <a href = "{{ url('/blotter/retrieveblotterrecord') }}">
         <span class="info-box-icon bg-red"><i class="fa fa-comments-o"></i></span>
         <div class="info-box-content bg-orange">
           <span class="info-box-text">Blotter Reports</span>
           <span class="info-box-number">{{$no}}</span>
         </div>
+      </a>
         <!-- /.info-box-content -->
       </div>
 
       <div class="info-box">
+        <a href="{{ url('/bpinformation/announcements') }}">
         <span class="info-box-icon bg-yellow"><i class="fa fa-info"></i></span>
 
         <div class="info-box-content bg-orange">
           <span class="info-box-text">Announcement List</span>
           <span class="info-box-number">{{$ano}}</span>
         </div>
+      </a>
         <!-- /.info-box-content -->
       </div>
       <!-- /.info-box -->
       <div class="info-box">
+        <a href="{{ url('/clerk/residentsearch') }}">
         <span class="info-box-icon bg-aqua"><i class="fa fa-map-o"></i></span>
 
         <div class="info-box-content bg-orange">
           <span class="info-box-text">Registered Resident Record/s</span>
           <span class="info-box-number">{{$rno}}</span>
         </div>
+      </a>
         <!-- /.info-box-content -->
       </div>
     </div>
