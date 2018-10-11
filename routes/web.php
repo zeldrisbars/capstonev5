@@ -41,5 +41,5 @@ Route::get('exception/index', 'ExceptionController@index');
 
 
 Route::group(['middleware' => 'App\Http\Middleware\citizenMiddleware'], function () {
-Route::get('/citizen/citizenhome','CitizenHome@index');
+Route::get('citizen/citizenhome','CitizenHome@index');
 });
