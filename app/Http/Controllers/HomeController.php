@@ -30,7 +30,7 @@ class HomeController extends Controller
     {
         if (Auth::user()->role == "Citizen")
         {
-            return redirect('citizen/citizenhome');
+            return view('citizen/citizenhome');
         }
         toastr()->success('Successfully Logged In!');
         $announcement = Announcements::count('id');
