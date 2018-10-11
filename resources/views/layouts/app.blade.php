@@ -12,6 +12,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/citizen.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/landing-page.min.css')}}">
+  <!-- Custom styles for this template -->
+    <link href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
     <style>
         .navbar
         {
@@ -35,7 +39,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -56,7 +60,10 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                       <li><a href="#profile" class="js-scroll-trigger">Profile</a></li>
+                        <li><a href="#blotter" class="js-scroll-trigger">Submit Blotter Report</a></li>
+                        <li><a href="#forms" class="js-scroll-trigger">Downloadable Forms</a></li>
+                       <li><a href="#comments" class="js-scroll-trigger">Feedback</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -95,5 +102,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/citizen.js') }}"></script>
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('js/scrolling-nav.js')}}"></script>
+<!-- Plugin JavaScript -->
+    <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 </body>
 </html>
