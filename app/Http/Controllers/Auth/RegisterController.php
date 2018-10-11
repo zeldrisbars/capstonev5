@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Foundation\Auth\RegistersUsers;
 class RegisterController extends Controller
 {
     /*
@@ -22,7 +23,7 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-
+    use RegistersUsers;
     /**
      * Where to redirect users after registration.
      *
@@ -76,6 +77,7 @@ class RegisterController extends Controller
             return back()->with($notification);
         
         }
+
         $this->validator($request->all())->validate();
 
         event(new Registered($user = $this->create($request->all())));
