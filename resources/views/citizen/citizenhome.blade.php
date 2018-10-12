@@ -118,7 +118,7 @@
         <h3>Downloadable Forms</h3>
         <hr>
         <div class="form-group">
-            <center><label>Please choose your forms that you want to print and pay for the fees when you going to barangay.</label></center>
+            <center><label>Please choose your forms that you want to print and pay for the fees when you going to barangay and sign the signature with a dry seal.</label></center>
             <br>
             <br>
             <center>
