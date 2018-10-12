@@ -52,13 +52,14 @@
     <div class="col-md-9">
     <div id="blotter">
     <div class="profile-content">
-        <h3>Submit Blotter Report</h3>
+        <h3>Blotter</h3>
         <hr>
+        <label> <strong>Take Note:</strong> Please make sure that your report is true and valid.</label>
         <div class="box-body">
     @php
     
     @endphp
-    
+    <br />
     <input type="hidden" name="id" id="id" value="">
     <div class="form-group required">
     <label class="control-label" for="accused">Name of Accused</label>
@@ -93,6 +94,10 @@
         <option>File to Action</option>
     </select>
     </div>
+    <div class="form-group required">
+    <label class="control-label" for="accused">Contact Number</label>
+    <input type="text" class="form-control" name="contact" id="contact" placeholder="Your Contact Number" required="required">
+    </div>
     <br />
     <button type="submit" class="btn btn-primary pull-right">Submit</button>
     <br />
@@ -112,6 +117,23 @@
     <div class="profile-content">
         <h3>Downloadable Forms</h3>
         <hr>
+        <div class="form-group">
+            <center><label>Please choose your forms that you want to print and pay for the fees when you going to barangay.</label></center>
+            <br>
+            <br>
+            <center>
+            <a class="btn btn-lg btn-danger">Barangay Clearance</a>
+            </center>
+            <br>
+            <center>
+            <a class="btn btn-lg btn-danger">Certificate of Indegency</a>
+            </center>
+            <br>
+            <center>
+            <a class="btn btn-lg btn-danger">Residency Certificate</a>
+            <br>
+            </center>
+        </div>
     </div>
     </div>
 </div>
@@ -122,8 +144,25 @@
     <div id="comments">
     <br />
     <div class="profile-content">
-        <h3>Send Feedback / Suggestions</h3>
+        <h3>Send Feedback / Suggestions or Concerns</h3>
         <hr>
+        <label>Suggestions/Feedbacks or Any Concerns in Barangay</label>
+        <p>Please type your complain about the concerns that you may ask to the officials. They will contact you if they have response to your complain. Thank You!</p>
+        <div class="form-group">
+            <br />
+        <label>Your Concern About?</label>
+        <input type="text" name="concerntitle" class="form-control">
+        </div>
+        <div class="form-group">
+            <br />
+        <label>Type your Concerns Here</label>
+        <textarea class="form-control" rows="5" name="concerndetail" id="concerndetail" placeholder="Explain your concerns here in English or Tagalog." required="required"></textarea>
+        </div>
+        <br/>
+        <br/>
+        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+        <br/>
+        <br/>
     </div>
     </div>
     </div>
