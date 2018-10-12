@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>BGMS</title>
+    <title>BGIS</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/citizen.css') }}" rel="stylesheet">
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{asset('css/landing-page.min.css')}}">
   <!-- Custom styles for this template -->
     <link href="{{asset('css/scrolling-nav.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/font-awesome/css/font-awesome.min.css') }}">
+
     <style>
         .navbar
         {
@@ -53,7 +55,7 @@
 
                     <!-- Branding Image -->
                      <a class="navbar-brand" href="{{ url('/') }}" style="color: white;">
-                        <label>Barangay Guyong</label>
+                        <label>BGIS</label>
                     </a> 
                 </div>
 
@@ -107,5 +109,12 @@
 <script src="{{asset('js/scrolling-nav.js')}}"></script>
 <!-- Plugin JavaScript -->
     <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+    <script src="{{asset('vendor/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
+    <script src="{{asset('vendor/input-mask/jquery.inputmask.js')}}"></script>
+<script src="{{asset('vendor/input-mask/jquery.inputmask.date.extensions.js')}}"></script>
+<script src="{{asset('vendor/input-mask/jquery.inputmask.extensions.js')}}"></script>
+    <script>
+        $('#datetime').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    </script>
 </body>
 </html>

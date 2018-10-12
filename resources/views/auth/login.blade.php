@@ -50,7 +50,7 @@
                 <form action= "{{ route('login') }}" class="login100-form validate-form" method="POST">
                     {{csrf_field()}}
                     <span class="login100-form-title p-b-26">
-                        Brgy. Guyong
+                        <img src="{{ asset('images/Guyong Logo 3.png') }}" height="200px" width="200px">
                     </span>
                     <div class="text-center p-t-10">
                         <span class="txt1 text-center">

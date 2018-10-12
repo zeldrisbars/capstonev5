@@ -62,10 +62,10 @@ a:focus {
 a:hover {
 	text-decoration: none;
   color: #6a7dfe;
-  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  color: -o-linear-gradient(left, #21d4fd, #b721ff);
-  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  color: -webkit-linear-gradient(left, #ff7900, #e06005);
+  color: -o-linear-gradient(left, #ff7900, #e06005);
+  color: -moz-linear-gradient(left, #ff7900, #e06005);
+  color: linear-gradient(left, #ff7900, #e06005);
 }
 
 /*---------------------------------------------*/
@@ -112,15 +112,15 @@ textarea:focus:-moz-placeholder { color:transparent; }
 textarea:focus::-moz-placeholder { color:transparent; }
 textarea:focus:-ms-input-placeholder { color:transparent; }
 
-input::-webkit-input-placeholder { color: #adadad;}
-input:-moz-placeholder { color: #adadad;}
-input::-moz-placeholder { color: #adadad;}
-input:-ms-input-placeholder { color: #adadad;}
+input::-webkit-input-placeholder { color: #ff7900;}
+input:-moz-placeholder { color: #ff7900;}
+input::-moz-placeholder { color: #ff7900;}
+input:-ms-input-placeholder { color: #ff7900;}
 
-textarea::-webkit-input-placeholder { color: #adadad;}
-textarea:-moz-placeholder { color: #adadad;}
-textarea::-moz-placeholder { color: #adadad;}
-textarea:-ms-input-placeholder { color: #adadad;}
+textarea::-webkit-input-placeholder { color: #ff7900;}
+textarea:-moz-placeholder { color: #ff7900;}
+textarea::-moz-placeholder { color: #ff7900;}
+textarea:-ms-input-placeholder { color: #ff7900;}
 
 /*---------------------------------------------*/
 button {
@@ -260,10 +260,10 @@ iframe {
   transition: all 0.4s;
 
   background: #6a7dfe;
-  background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  background: -o-linear-gradient(left, #21d4fd, #b721ff);
-  background: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  background: linear-gradient(left, #21d4fd, #b721ff);
+  background: -webkit-linear-gradient(left, #ff7900, #e06005);
+  background: -o-linear-gradient(left, #ff7900, #e06005);
+  background: -moz-linear-gradient(left, #ff7900, #e06005);
+  background: linear-gradient(left, #ff7900, #e06005);
 }
 
 .focus-input100::after {
@@ -327,18 +327,18 @@ iframe {
 
 .btn-show-pass:hover {
   color: #6a7dfe;
-  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  color: -o-linear-gradient(left, #21d4fd, #b721ff);
-  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  color: -webkit-linear-gradient(left, #ff7900, #e06005);
+  color: -o-linear-gradient(left, #ff7900, #e06005);
+  color: -moz-linear-gradient(left, #ff7900, #e06005);
+  color: linear-gradient(left, #ff7900, #e06005);
 }
 
 .btn-show-pass.active {
   color: #6a7dfe;
-  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  color: -o-linear-gradient(left, #21d4fd, #b721ff);
-  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  color: -webkit-linear-gradient(left, #ff7900 #e06005);
+  color: -o-linear-gradient(left, #ff7900 #e06005);
+  color: -moz-linear-gradient(left, #ff7900 #e06005);
+  color: linear-gradient(left,#ff7900, #e06005);
 }
 
 
@@ -372,10 +372,10 @@ iframe {
   width: 300%;
   height: 100%;
   background: #a64bf4;
-  background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-  background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-  background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-  background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: -webkit-linear-gradient(right, #ff7900, #e06005, #ff7900, #e06005);
+  background: -o-linear-gradient(right, #ff7900, #e06005, #ff7900, #e06005);
+  background: -moz-linear-gradient(right, #ff7900, #e06005, #ff7900, #e06005);
+  background: linear-gradient(right, #ff7900, #e06005, #ff7900, #e06005);
   top: 0;
   left: -100%;
 

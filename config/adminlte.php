@@ -126,7 +126,7 @@ return [
         'can' => 'isSAdmin',
         ],
         [
-            'text'        => 'User Role',
+            'text'        => 'User Accounts',
             'url'         => 'admin/ticket',
             'icon'        => 'warning',
             'can' => 'isSAdmin',

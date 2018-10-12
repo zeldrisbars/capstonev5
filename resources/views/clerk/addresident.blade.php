@@ -205,7 +205,7 @@
             <input type="text" name="hno" id="hno" class="form-control">
             </div>
             <div class="col-md-3">
-            <label>Household Relationship</label>
+            <label>Relationship to Household Head</label>
             <input type="text" name="hrel" id="hrel" class="form-control">
             </div>
             <div class="col-md-3">
