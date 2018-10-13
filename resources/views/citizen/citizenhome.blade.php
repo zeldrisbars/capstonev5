@@ -141,6 +141,8 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-9">
+        <form action ="{{route('citizen.sendfeedback')}}" method="post">
+            {{csrf_field()}}
     <div id="comments">
     <br />
     <div class="profile-content">
@@ -148,7 +150,13 @@
         <hr>
         <label>Suggestions/Feedbacks or Any Concerns in Barangay</label>
         <p>Please type your complain about the concerns that you may ask to the officials. They will contact you if they have response to your complain. Thank You!</p>
+        @php
+        $num = $cid;
+        $cid++;
+        @endphp
         <div class="form-group">
+        <input type="hidden" name="id" value="{{$cid}}">
+        <input type="hidden" name="name" value="{{ Auth::user()->name }}">
             <br />
         <label>Your Concern About?</label>
         <input type="text" name="concerntitle" class="form-control">
@@ -158,6 +166,11 @@
         <label>Type your Concerns Here</label>
         <textarea class="form-control" rows="5" name="concerndetail" id="concerndetail" placeholder="Explain your concerns here in English or Tagalog." required="required"></textarea>
         </div>
+        <div class="form-group">
+            <br />
+        <label>Contact #</label>
+        <input type="text" name="contactnum" class="form-control">
+        </div>
         <br/>
         <br/>
         <button type="submit" class="btn btn-primary pull-right">Submit</button>
@@ -165,6 +178,7 @@
         <br/>
     </div>
     </div>
+</form>
     </div>
 </div>
 <br />

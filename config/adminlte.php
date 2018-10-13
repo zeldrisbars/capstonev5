@@ -117,9 +117,9 @@ return [
             'icon'        => 'star',
         ],
         [
-            'text'        => 'Print Downloadable Forms',
-            'url'         => 'admin/downloadforms',
-            'icon'        => 'print',
+            'text'        => 'Suggestion Inbox',
+            'url'         => 'admin/mailbox',
+            'icon'        => 'envelope',
         ],
         [
         'header' => 'User Role Settings',

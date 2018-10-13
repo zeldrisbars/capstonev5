@@ -35,5 +35,7 @@ Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
 Route::get('/viewforms','DownloadForms@index')->name('viewforms');
 Route::get('barangayclearance/print','PdfController@index');
 Route::get('/citizen/citizenhome','CitizenHome@index');
+Route::post('/citizen/citizenhome/sendfeedback','CitizenHome@sendFeedback')->name('citizen.sendfeedback');
+Route::get('/admin/mailbox','Mailbox@index');
 // Exception routes
 Route::get('exception/index', 'ExceptionController@index');
