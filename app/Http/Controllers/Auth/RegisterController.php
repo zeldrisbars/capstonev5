@@ -69,7 +69,6 @@ class RegisterController extends Controller
      */
     public function register(Request $request)
     {   
-        $email = DB::table('resident')->value('email');
         
         if ($request['role'] == "Super Administrator")
         {   
@@ -79,13 +78,7 @@ class RegisterController extends Controller
             return back()->with($notification);
         
         }
-        else if ($request['email'] != $email)
-        {
-             $notification = array(
-    'message' => 'You are not bonafide resident!', 
-    'alert-type' => 'error');
-            return redirect('/regnon')->with($notification);
-        }
+        
 
         $this->validator($request->all())->validate();
 
