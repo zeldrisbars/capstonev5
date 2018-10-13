@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Resident;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -67,8 +68,8 @@ class RegisterController extends Controller
      * @return \App\User
      */
     public function register(Request $request)
-    {
-        
+    {   
+        $email = DB::table('resident')->value('email');
         if ($request['role'] == "Super Administrator")
         {   
             $notification = array(
@@ -77,7 +78,13 @@ class RegisterController extends Controller
             return back()->with($notification);
         
         }
-
+        if ($request['email'] != $email)
+        {
+             $notification = array(
+    'message' => 'You are not bonafide resident!', 
+    'alert-type' => 'error');
+            return redirect('/regnon')->with($notification);
+        }
         $this->validator($request->all())->validate();
 
         event(new Registered($user = $this->create($request->all())));
@@ -89,6 +96,7 @@ class RegisterController extends Controller
     }
     protected function create(array $data)
     {  
+        
         return User::create([
             'id' => $data['id'],
             'name' => $data['name'],

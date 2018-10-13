@@ -1,9 +1,10 @@
 <?php
+
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Resident extends Migration
+class Nonresident extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +13,7 @@ class Resident extends Migration
      */
     public function up()
     {
-        Schema::create('resident', function (Blueprint $table) {
+         Schema::create('nonresident', function (Blueprint $table) {
             $table->increments('id');
             $table->string('lastname');
             $table->string('firstname');
@@ -44,8 +45,7 @@ class Resident extends Migration
             $table->string('sib');
             $table->rememberToken();
             $table->timestamps();
-        });
-    }
+        });    }
 
     /**
      * Reverse the migrations.

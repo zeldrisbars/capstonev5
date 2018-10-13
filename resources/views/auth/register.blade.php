@@ -108,14 +108,8 @@
                     <div class="wrap-input100 validate-input" data-validate="Enter Confirm Password">
                         <input class="input100" type="password" name="password_confirmation" id="password-confirm" required>
                         <span class="focus-input100" data-placeholder="Confirm Password"></span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate = "Role?">
-                        <input class="input100" type="text" name="role" id="role" required>
-                        <span class="focus-input100" data-placeholder="Role?" ></span>
-                    </div>                    
-                    
-                   
+                    </div>                
+                    <input class="input100" type="hidden" name="role" id="role" value="Citizen">
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>

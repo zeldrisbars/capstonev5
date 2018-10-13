@@ -21,6 +21,7 @@ class AddResident extends Controller
             'lastname' => 'required|string|max:255',
             'firstname' => 'required|string|max:255',
             'middlename' => 'required|string|max:255',
+            'email' => 'required|string|max:255',
             'gender' => 'required|string|max:255',
             'civil' => 'required|string|max:255',
             'image' => 'image|mimes:jpeg,png,jpg,svg',
@@ -45,7 +46,6 @@ class AddResident extends Controller
             'hno' => 'required|string|max:255',
             'hrel' =>'required|string|max:255',
             'sib' => 'required|string|max:255',
-            'sal'=>'required|string|max:255',
 
         ]);
     }
@@ -77,6 +77,7 @@ class AddResident extends Controller
             'lastname' => $request['lastname'],
             'firstname' => $request['firstname'],
             'middlename' => $request['middlename'],
+            'email' => $request['email'],
             'image' => $pic,
             'gender' => $request['gender'],
             'civil' => $request['civil'],
@@ -101,7 +102,7 @@ class AddResident extends Controller
             'hno' => $request['hno'],
             'hrel' => $request['hrel'],
             'sib' => $request['sib'],
-            'sal' => $request['sal'],
+            
 
         ]); 
     return back();

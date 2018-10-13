@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Resident;
+use App\NonResident;
 
 class NonResidentController extends Controller
 {
@@ -14,7 +14,7 @@ class NonResidentController extends Controller
 
     public function index()
     {
-    	$resident = Resident::all();
+    	$resident = NonResident::all();
         return view('clerk.nonresident',compact('resident'));
     }
 }

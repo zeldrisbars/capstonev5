@@ -178,11 +178,6 @@ return [
             'url'         => 'clerk/nonresident',
             'icon'        => 'book',
         ],
-        [
-            'text'        => 'Inhabitant Household',
-            'url'         => 'clerk/inhabitant',
-            'icon'        => 'exclamation',
-        ],
         
         
     ],

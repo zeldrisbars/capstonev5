@@ -14,6 +14,8 @@
 Route::get('/','Welcome@index');
 Auth::routes();
 Route::get('/register','Auth\RegisterController@index')->name('register');
+Route::get('/regnon','Regnon@index');
+Route::resource('/regnon','RegNon');
 //Admin
 Route::get('/home','HomeController@index')->name('home');
 Route::get('/admin/dashboard','AdminController@index')->name('dashboard');
@@ -30,7 +32,6 @@ Route::get('clerk/addresident','AddResident@index');
 Route::resource('clerk/addresident','AddResident');
 Route::get('clerk/residentsearch','ResidentSearch@index');
 Route::get('clerk/nonresident', 'NonResidentController@index');
-Route::get('clerk/inhabitant','PendingResidentController@index');
 Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
 Route::get('/viewforms','DownloadForms@index')->name('viewforms');
 Route::get('barangayclearance/print','PdfController@index');

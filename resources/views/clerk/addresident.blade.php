@@ -84,6 +84,11 @@
 		<input type="text" name="age" id="age" class="form-control" value="">
 	<br />
 	</div>
+	<div class="col-md-3">
+		<label>E-Mail</label>
+		<input type="text" name="email" id="email" class="form-control" value="">
+	<br />
+	</div>
 </div>
 
 <div class="row">
@@ -211,10 +216,6 @@
             <div class="col-md-3">
             <label>Number of Siblings</label>
             <input type="text" name="sib" id="sib" class="form-control">
-            </div>
-            <div class="col-md-3">
-            	<label>Salary Amount on then Family</label>
-            <input type="text" name="sal" id="sal" class="form-control">	
             </div>
             </div>
             <!-- /.box-body -->
