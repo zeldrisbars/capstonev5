@@ -34,7 +34,7 @@ Route::get('clerk/residentsearch','ResidentSearch@index');
 Route::get('clerk/nonresident', 'NonResidentController@index');
 Route::resource('clerk/nonresident','NonResidentController');
 Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
-Route::get('/viewforms','DownloadForms@index')->name('viewforms');
+Route::get('/barangayclearance','DownloadForms@index')->name('barangayclearance');
 Route::get('barangayclearance/print','PdfController@index');
 Route::get('/citizen/citizenhome','CitizenHome@index');
 Route::post('/citizen/citizenhome/sendfeedback','CitizenHome@sendFeedback')->name('citizen.sendfeedback');
