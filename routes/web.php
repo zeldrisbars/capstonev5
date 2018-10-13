@@ -32,6 +32,7 @@ Route::get('clerk/addresident','AddResident@index');
 Route::resource('clerk/addresident','AddResident');
 Route::get('clerk/residentsearch','ResidentSearch@index');
 Route::get('clerk/nonresident', 'NonResidentController@index');
+Route::resource('clerk/nonresident','NonResidentController');
 Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
 Route::get('/viewforms','DownloadForms@index')->name('viewforms');
 Route::get('barangayclearance/print','PdfController@index');

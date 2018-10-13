@@ -290,6 +290,73 @@ $('#readMail').on('show.bs.modal', function (event) {
   
 })
 
+$('#nonResident').on('show.bs.modal', function (event) {
+  console.log('Modal Opened')
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var id = button.data('myid')
+  var lname = button.data('mylname')
+  var fname = button.data('myfname')
+  var mname = button.data('mymname')
+  var gender = button.data('mygender')
+  var bday = button.data('mybdate')
+  var age = button.data('myage')
+  var memail = button.data('myemail')
+  var votersno = button.data('myvotersno')
+  var yearsres = button.data('myyearsres')
+  var citizen = button.data('mycitizen')
+  var religion = button.data('myrelig')
+  var street = button.data('mystreet')
+  var bara = button.data('mybara')
+  var muni = button.data('mymuni')
+  var prov = button.data('myprov')
+  var zip = button.data('myzip')
+  var sitio = button.data('mysitio')
+  var mlast = button.data('mymlast')
+  var mfirst = button.data('mymfirst')
+  var mmiddle = button.data('mymmiddle')
+  var flast = button.data('myflast')
+  var ffirst = button.data('myffirst')
+  var fmiddle = button.data('myfmiddle')
+  var hno = button.data('myhno')
+  var hrel = button.data('myhrel')
+  var sib = button.data('mysib')
+  
+
+   // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('Verify Bonafide Resident?')
+  modal.find('.modal-body #id').val(id)
+  modal.find('.modal-body #lastname').val(lname)
+  modal.find('.modal-body #firstname').val(fname)
+  modal.find('.modal-body #middlename').val(mname)
+  modal.find('.modal-body #gender').val(gender)
+  modal.find('.modal-body #birthdate').val(bday)
+  modal.find('.modal-body #age').val(age)
+  modal.find('.modal-body #email').val(memail)
+  modal.find('.modal-body #votersno').val(votersno)
+  modal.find('.modal-body #yearsres').val(yearsres)
+  modal.find('.modal-body #citizenship').val(citizen)
+  modal.find('.modal-body #religion').val(religion)
+  modal.find('.modal-body #street').val(street)
+  modal.find('.modal-body #barangay').val(bara)
+  modal.find('.modal-body #cityprovince').val(muni)
+  modal.find('.modal-body #province').val(prov)
+  modal.find('.modal-body #zipcode').val(zip)
+  modal.find('.modal-body #sitio').val(sitio)
+  modal.find('.modal-body #mlast').val(mlast)
+  modal.find('.modal-body #mfirst').val(mfirst)
+  modal.find('.modal-body #mmiddle').val(mmiddle)
+  modal.find('.modal-body #flast').val(flast)
+  modal.find('.modal-body #ffirst').val(ffirst)
+  modal.find('.modal-body #fmiddle').val(fmiddle)
+  modal.find('.modal-body #hno').val(hno)
+  modal.find('.modal-body #hrel').val(hrel)
+  modal.find('.modal-body #sib').val(sib)
+  
+})
+
 $('#deleteModal').on('show.bs.modal', function (event) {
     console.log('Modal Opened')
   var button = $(event.relatedTarget) // Button that triggered the modal
