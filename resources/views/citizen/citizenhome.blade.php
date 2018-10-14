@@ -169,7 +169,7 @@
         @endphp
         <div class="form-group">
         <input type="hidden" name="id" value="{{$cid}}">
-        <input type="hidden" name="name" value="{{ Auth::user()->name }}">
+        <input type="hidden" name="name" value="{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}">
             <br />
         <label>Your Concern About?</label>
         <input type="text" name="concerntitle" class="form-control">
