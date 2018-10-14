@@ -218,7 +218,8 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
 <section id="contacts" class="testimonials animated slideInLeft">
   <div class="container" style="text-align: start;">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
+        <br />
       <h3>Contacts</h3>
       <p class="lead">Ask questions for the Information Officer</p>
       <br />
@@ -242,6 +243,46 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
     Guyong BDRRMC | 0917 331 5346
     </h5>
     </div>
+    </div>
+    <div class="col-md-6">
+        <form action ="{{route('welcome.send')}}" method="post">
+            {{csrf_field()}}
+    <div id="comments">
+    <br />
+    <div class="profile-content">
+        <h3>Send Feedback / Suggestions or Concerns</h3>
+        <hr>
+        <label>Suggestions/Feedbacks or Any Concerns in Barangay</label>
+        <p>Please type your complain about the concerns that you may ask to the officials. They will contact you if they have response to your complain. Thank You!</p>
+        @php
+        $num = $cid;
+        $cid++;
+        @endphp
+        <div class="form-group">
+        <input type="hidden" name="id" value="{{$cid}}">
+        <input type="hidden" name="name" value="">
+            <br />
+        <label>Your Concern About?</label>
+        <input type="text" name="concerntitle" class="form-control">
+        </div>
+        <div class="form-group">
+            <br />
+        <label>Type your Concerns Here</label>
+        <textarea class="form-control" rows="5" name="concerndetail" id="concerndetail" placeholder="Explain your concerns here in English or Tagalog." required="required"></textarea>
+        </div>
+        <div class="form-group">
+            <br />
+        <label>Contact #</label>
+        <input type="text" name="contactnum" class="form-control">
+        </div>
+        <br/>
+        <br/>
+        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+        <br/>
+        <br/>
+    </div>
+    </div>
+</form>
     </div>
     </div>
   </div>

@@ -53,15 +53,15 @@
       <div class="body" style="z-index:999;">
 		<div class="content" style="position:absolute; top:-550px; margin:45px;">
 		<br /><p>Sa mga kinauukulan:</p></br>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ito ay pagpapatunay na si <u>G. Rino Gimeno</u> ay may sapat na gulang at naninirahan sa #<u>143 Matang Tubig</u><b> St. Guyong, Santa Maria, Bulacan</b> ay kabarangay ko.</p>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pagpapatunay pa rin na si <u>G. Rino Gimeno</u> ay mula sa aming barangay at walang pirmihang hanap-buhay at wala ring kakayahang matugunan ang kaniyang mga gastusin at pangangailangan sa ngayon.
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ito ay pagpapatunay na si <u>{{$gender}} {{$name}}</u> ay may sapat na gulang at naninirahan sa #<u>{{$street}}</u><b> St. Guyong, Santa Maria, Bulacan</b> ay kabarangay ko.</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pagpapatunay pa rin na si <u>{{$gender}} {{$name}}</u> ay mula sa aming barangay at walang pirmihang hanap-buhay at wala ring kakayahang matugunan ang kaniyang mga gastusin at pangangailangan sa ngayon.
 		</p>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ang tulong na kaniyang kakailanganin sa inyong tanggapan ay upang magamit sa kanyang: <u>pangtustos sa kanyang pamilya at mairaos ang araw-araw nilang pamumuhay</u> at para sa tulong <u>na kakailanganin niya.</u></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ang tulong na kaniyang kakailanganin sa inyong tanggapan ay upang magamit sa kanyang: <u>{{$reason1}}</u> at para sa tulong at <u>{{$reason2}}.</u></p>
 		
 		<br />
 		<p>T A N G G A P A N:</p>
         <p></p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ipinagkaloob ngayong ika-<u>20</u> ng <u>Septyembre</u> 20<u>18</u></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ipinagkaloob ngayong <u>{{$date}}</u></p>
 
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____________________</p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Lagda</strong></p>

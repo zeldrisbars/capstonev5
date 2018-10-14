@@ -14,8 +14,8 @@ class Feedback extends Migration
     public function up()
     {
         Schema::create('feedback', function (Blueprint $table) {
-            $table->integer('id')->unsigned();
-            $table->string('name');
+            $table->integer('id');
+            $table->string('name')->nullable();
             $table->string('concerntitle');
             $table->string('concerndetail');
             $table->string('contactnum');

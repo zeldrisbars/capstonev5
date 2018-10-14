@@ -122,15 +122,15 @@
             <br>
             <br>
             <center>
-            <a class="btn btn-lg btn-danger">Barangay Clearance</a>
+            <a class="btn btn-lg btn-danger" data-toggle="modal" data-target="#brgyclear">Barangay Clearance</a>
             </center>
             <br>
             <center>
-            <a class="btn btn-lg btn-danger">Certificate of Indegency</a>
+            <a class="btn btn-lg btn-danger" data-toggle="modal" data-target="#resi">Certificate of Indigency</a>
             </center>
             <br>
             <center>
-            <a class="btn btn-lg btn-danger">Residency Certificate</a>
+            <a class="btn btn-lg btn-danger" data-toggle="modal" data-target="#resi2">Residency Certificate</a>
             <br>
             </center>
         </div>
@@ -184,6 +184,211 @@
 <br />
     <br /><br />
     <br />
+
+<div class="modal modal-primary fade" id="brgyclear" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Fill the Form Needed</h4>
+      </div>
+      <form action ="{{route('forms.clearance')}}" method="post">
+        {{csrf_field()}}   
+        
+        
+      <div class="modal-body">
+        <div class="row">
+       <div class="col-md-3">
+  <label>Gender Title</label>
+  <select name="gendertitle" id="gendertitle" class="form-control">
+            <option>Mr.</option>
+            <option>Ms.</option>
+            <option>Mrs.</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Name</label>
+<input type="text" name="name" id="name" class="form-control">
+</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Street</label>
+<input type="text" name="street" id="street" class="form-control">
+</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Civil</label>
+<select name="civil" id="civil" class="form-control">
+            <option>Single</option>
+            <option>Married</option>
+            <option>Widowed</option>
+            <option>Separated</option>
+          </select>
+</div>
+</div>
+<div class="row">
+        <div class="col-md-8">
+<label>Purpose</label>
+<input type="text" name="purpose" id="purpose" class="form-control">
+</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Date Issued</label>
+<input type="text" name="dateissued" id="dateissued" class="form-control" readonly>
+</div>
+      </div>
+      
+  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-primary fade" id="resi" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Fill the Form Needed</h4>
+      </div>
+      <form action ="{{route('forms.indigency')}}" method="post">
+        {{csrf_field()}}   
+        
+        
+      <div class="modal-body">
+        <div class="row">
+       <div class="col-md-3">
+  <label>Gender Title</label>
+  <select name="gendertitle" id="gendertitle" class="form-control">
+            <option>G.</option>
+            <option>Bb.</option>
+            <option>Gng.</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Name</label>
+<input type="text" name="name" id="name" class="form-control">
+</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Street</label>
+<input type="text" name="street" id="street" class="form-control">
+</div>
+      </div>
+<div class="row">
+        <div class="col-md-8">
+<label>1st Reason why you needed for your needs</label>
+<input type="text" name="reason1" id="reason1" class="form-control">
+</div>
+</div>
+<div class="row">
+        <div class="col-md-8">
+<label>2st Reason why you needed for your needs</label>
+<input type="text" name="reason2" id="reason2" class="form-control">
+</div>
+</div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Date Issued</label>
+<input type="text" name="dateissued2" id="dateissued2" class="form-control" readonly>
+</div>
+      </div>
+      
+  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-primary fade" id="resi2" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Fill the Form Needed</h4>
+      </div>
+      <form action ="{{route('forms.residency')}}" method="post">
+        {{csrf_field()}}   
+        
+        
+      <div class="modal-body">
+        <div class="row">
+       <div class="col-md-3">
+  <label>Gender Title</label>
+  <select name="gendertitle" id="gendertitle" class="form-control">
+            <option>Mr.</option>
+            <option>Ms.</option>
+            <option>Mrs.</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Name</label>
+<input type="text" name="name" id="name" class="form-control">
+</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Age</label>
+<input type="text" name="age" id="age" class="form-control">
+</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Street</label>
+<input type="text" name="street" id="street" class="form-control">
+</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Civil</label>
+<select name="civil" id="civil" class="form-control">
+            <option>Single</option>
+            <option>Married</option>
+            <option>Widowed</option>
+            <option>Separated</option>
+          </select>
+</div>
+</div>
+<div class="row">
+        <div class="col-md-8">
+<label>Purpose</label>
+<input type="text" name="purpose" id="purpose" class="form-control">
+</div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+<label>Date Issued</label>
+<input type="text" name="dateissued3" id="dateissued3" class="form-control" readonly>
+</div>
+      </div>
+      
+  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
 @endsection
 
 

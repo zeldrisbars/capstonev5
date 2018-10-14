@@ -12,6 +12,7 @@
 */
 
 Route::get('/','Welcome@index');
+Route::post('/send','Welcome@send')->name('welcome.send');
 Auth::routes();
 Route::get('/register','Auth\RegisterController@index')->name('register');
 Route::get('/regnon','Regnon@index');
@@ -36,8 +37,13 @@ Route::resource('clerk/nonresident','NonResidentController');
 Route::get('blotter/retrieveblotterrecord','RetrieveBlotter@index');
 Route::get('/barangayclearance','DownloadForms@index')->name('barangayclearance');
 Route::get('barangayclearance/print','PdfController@index');
+Route::get('indigency/print','PdfController@resi');
+Route::get('residency/print','PdfController@resi2');
 Route::get('/citizen/citizenhome','CitizenHome@index');
 Route::post('/citizen/citizenhome/sendfeedback','CitizenHome@sendFeedback')->name('citizen.sendfeedback');
+Route::post('/citizen/citizenhome/clearance','Forms@clearance')->name('forms.clearance');
+Route::post('/citizen/citizenhome/indigency','Forms@indigency')->name('forms.indigency');
+Route::post('/citizen/citizenhome/residency','Forms@residency')->name('forms.residency');
 Route::get('/admin/mailbox','Mailbox@index');
 // Exception routes
 Route::get('exception/index', 'ExceptionController@index');

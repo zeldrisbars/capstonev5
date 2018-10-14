@@ -53,14 +53,14 @@
       <div class="body" style="z-index:999;">
 		<div class="content" style="position:absolute; top:-580px; margin:45px;">
 		<p>To whom it may concern:</p></br>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is to certify that <u>Mr. Christian Joseph Abillonar Ducut</u> , <u>21</u> years old , &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;married (&nbsp;&nbsp;&nbsp;&nbsp;), single (&nbsp;&nbsp;&nbsp;&nbsp;), is a bonafide resident of #<u>166 Sitio Libis</u>, Guyong, Santa Maria, Bulacan, is known to up to present within the jurisdiction of this Barangay.
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is to certify that <u>{{$gender}} {{$name}}</u> , <u>{{$age}}</u> years old , <u>{{$civil}}</u> , is a bonafide resident of #<u>{{$street}}</u>, Guyong, Santa Maria, Bulacan, is known to up to present within the jurisdiction of this Barangay.
         </p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This certification is being issued upon the request of the above mentioned name for whatever legal purposes it may serve him/her best.
 		</p>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given this <u>20th</u> of <u>September</u>, 20<u>18</u> at Sangguniang Barangay of Santa Maria, Bulacan.</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given this <u>{{$date}}</u> at Sangguniang Barangay of Santa Maria, Bulacan.</p>
 		
 		<br />
-		<p><strong>PURPOSE:&nbsp;<u>Educational Purposes</u></strong></p>
+		<p><strong>PURPOSE:&nbsp;<u>{{$purpose}}</u></strong></p>
 
 		<br />
 
