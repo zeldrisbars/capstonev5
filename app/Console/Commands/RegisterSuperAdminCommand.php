@@ -56,7 +56,9 @@ class RegisterSuperAdminCommand extends Command
     private function getDetails() : array
     {
         $details['id'] = $this->ask('ID (Enter it #1)');
-        $details['name'] = $this->ask('Name');
+        $details['lastname'] = $this->ask('Last Name');
+        $details['firstname'] = $this->ask('First Name');
+        $details['middlename'] = $this->ask('Middle Name');
         $details['username'] = $this->ask('Username');
         $details['email'] = $this->ask('Email');
         $details['password'] = $this->secret('Password');
@@ -84,7 +86,6 @@ class RegisterSuperAdminCommand extends Command
     {
         $headers = ['Name', 'Email', 'Super admin'];
         $fields = [
-            'Name' => $admin->name,
             'email' => $admin->email,
             'admin' => $admin->isSuperAdmin()
         ];

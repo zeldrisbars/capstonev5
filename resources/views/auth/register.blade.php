@@ -85,9 +85,17 @@
                         <input class="input100" type="hidden" name="id" id="id" value="{{$no}}">
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate = "Enter Your Name">
-                        <input class="input100" type="text" name="name" id="name" required>
-                        <span class="focus-input100" data-placeholder="Enter Your Name"></span>
+                    <div class="wrap-input100 validate-input" data-validate = "Enter Your Last Name">
+                        <input class="input100" type="text" name="lastname" id="lastname" required>
+                        <span class="focus-input100" data-placeholder="Enter Your Last Name"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate = "Enter Your First Name">
+                        <input class="input100" type="text" name="firstname" id="firstname" required>
+                        <span class="focus-input100" data-placeholder="Enter Your First Name"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate = "Enter Your Middle Name">
+                        <input class="input100" type="text" name="middlename" id="middlename" required>
+                        <span class="focus-input100" data-placeholder="Enter Your Middle Name"></span>
                     </div>
                     
                     <div class="wrap-input100 validate-input" data-validate = "Enter Username">

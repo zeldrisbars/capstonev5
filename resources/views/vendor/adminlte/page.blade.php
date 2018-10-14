@@ -281,7 +281,7 @@ $('#readMail').on('show.bs.modal', function (event) {
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
-  modal.find('.modal-title').text('Suggestion Box')
+  modal.find('.modal-title').text('View Resident')
   modal.find('.modal-body #id').val(id)
   modal.find('.modal-body #name').val(cname)
   modal.find('.modal-body #concerntitle').val(ctitle)

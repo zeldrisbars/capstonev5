@@ -13,13 +13,14 @@
             <div class="profile-sidebar" style="background-color:orange">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="{{asset('images/user.png') }}" class="img-responsive" alt="">
+                    <img src="{{asset('images/steve.jpg') }}" class="img-responsive" alt="">
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name" style="color: white">
-                        {{ Auth::user()->name }}
+                        {{ Auth::user()->firstname }}
+              {{ Auth::user()->middlename }} {{ Auth::user()->lastname }}
                     </div>
                     <div class="profile-usertitle-job" style="color: white">
                         {{ Auth::user()->role }}
@@ -37,7 +38,8 @@
             <h3>Profile Information</h3>
             <hr>
             <label>Name</label>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Auth::user()->name }}</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Auth::user()->firstname }}
+              {{ Auth::user()->middlename }} {{ Auth::user()->lastname }}</p>
             <br />
             <label>E-Mail</label>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Auth::user()->email }}</p>

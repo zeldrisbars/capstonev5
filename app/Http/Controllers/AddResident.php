@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Resident;
+use App\User;
 use Illuminate\Support\Facades\Validator;
 use Gate;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use DB;
 class AddResident extends Controller
@@ -46,6 +47,8 @@ class AddResident extends Controller
             'hno' => 'required|string|max:255',
             'hrel' =>'required|string|max:255',
             'sib' => 'required|string|max:255',
+            'username' => 'required|string|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
 
         ]);
     }
@@ -53,12 +56,12 @@ class AddResident extends Controller
     public function index()
     {
 
-        $resident=Resident::count('id');
+        $resident=User::count('id');
         return view('clerk.addresident',compact('resident'));
     }
     public function store(Request $request)
-    {
-        
+    {   
+                $role = "Citizen";
                 $file = $request->file('image');
                 $pic = "";
                 if($file == '' || $file == null){
@@ -72,16 +75,19 @@ class AddResident extends Controller
                     $request->file('image')->move("images",$pic);
                 }
                     // $request->file('photo')->move(public_path("/uploads"), $newfilename);
-            Resident::create([
+            User::create([
             'id' => $request['id'],
             'lastname' => $request['lastname'],
             'firstname' => $request['firstname'],
             'middlename' => $request['middlename'],
             'email' => $request['email'],
             'image' => $pic,
+            'username' => $request['username'],
+            'password' => Hash::make($request['password']),
             'gender' => $request['gender'],
             'civil' => $request['civil'],
             'age' => $request['age'],
+            'role' => $role,
             'birthdate' => $request['birthdate'],
             'votersno' => $request['votersno'],
             'yearsres' => $request['yearsres'],

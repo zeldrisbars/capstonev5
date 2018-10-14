@@ -89,6 +89,16 @@
 		<input type="text" name="email" id="email" class="form-control" value="">
 	<br />
 	</div>
+	<div class="col-md-3">
+		<label>Username</label>
+		<input type="text" name="username" id="username" class="form-control">
+	<br />
+	</div>
+	<div class="col-md-3">
+		<label>Password</label>
+		<input type="password" name="password" id="password" class="form-control">
+	<br />
+	</div>
 </div>
 
 <div class="row">
