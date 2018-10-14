@@ -41,6 +41,7 @@ Route::get('indigency/print','PdfController@resi');
 Route::get('residency/print','PdfController@resi2');
 Route::get('/citizen/citizenhome','CitizenHome@index');
 Route::post('/citizen/citizenhome/sendfeedback','CitizenHome@sendFeedback')->name('citizen.sendfeedback');
+Route::post('/citizen/citizenhome/blottercreate','CitizenHome@blottercreate')->name('citizen.blottercreate');
 Route::post('/citizen/citizenhome/clearance','Forms@clearance')->name('forms.clearance');
 Route::post('/citizen/citizenhome/indigency','Forms@indigency')->name('forms.indigency');
 Route::post('/citizen/citizenhome/residency','Forms@residency')->name('forms.residency');

@@ -93,20 +93,20 @@
       
       <div class="form-group">
                   <label for="name">Control No.</label>
-                  <input type="text" class="form-control" placeholder="Control #" name="controlno" id="controlno">
+                  <input type="text" class="form-control" placeholder="Control #" name="controlno" id="controlno" readonly>
                 </div>
       
                   <div class="form-group">
                   <label for="name">Name of Accused</label>
-                  <input type="text" class="form-control" placeholder="Enter Name" name="accused" id="accused">
+                  <input type="text" class="form-control" placeholder="Enter Name" name="accused" id="accused" readonly>
                 </div>
                 <div class="form-group">
                   <label for="name">Case of Incident</label>
-                  <input type="text" class="form-control" placeholder="Incident Title" name="caseofincident" id="caseofincident">
+                  <input type="text" class="form-control" placeholder="Incident Title" name="caseofincident" id="caseofincident" readonly>
                 </div>
                 <div class="form-group">
                   <label for="name">Description</label>
-                  <textarea class="form-control" rows="5" name="detail" id="detail" placeholder="Please type the details."></textarea>
+                  <textarea class="form-control" rows="5" name="detail" id="detail" placeholder="Please type the details." readonly></textarea>
                 </div>
                 <div class="form-group">
                 <label>Status</label>

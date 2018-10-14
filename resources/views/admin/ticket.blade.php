@@ -124,7 +124,7 @@
                     <option>Desk Officer</option>
                     <option>Treasurer</option>
                     <option>Clerk</option>
-                    <option>Author</option>
+                    <option>Citizen</option>
                   </select>
                 </div>
         <!--End Content -->

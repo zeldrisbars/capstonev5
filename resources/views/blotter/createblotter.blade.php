@@ -43,6 +43,10 @@
 	<input type="text" class="form-control" name="complainant" id="complainant" placeholder="Name" required="required">
 	</div>
 	<div class="form-group required">
+	<label class="control-label" for="complainant">Complainant Contact Number</label>
+	<input type="text" class="form-control" name="contactnum" id="contactnum" placeholder="Contact Number" required="required">
+	</div>
+	<div class="form-group required">
 	<label class="control-label" for="caseofincident">Cause of Incident</label>
 	<input type="text" class="form-control" name="caseofincident" id="caseofincident" placeholder="Cause of Incident" required="required">
 	</div>

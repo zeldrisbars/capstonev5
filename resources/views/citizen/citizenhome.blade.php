@@ -51,22 +51,25 @@
     </div>
     <div class="col-md-9">
     <div id="blotter">
+      <form action ="{{route('citizen.blottercreate')}}" method="post">
+            {{csrf_field()}}
     <div class="profile-content">
         <h3>Blotter</h3>
         <hr>
         <label> <strong>Take Note:</strong> Please make sure that your report is true and valid.</label>
         <div class="box-body">
     @php
-    
+    $sed = $bid;
+    $sed++;
     @endphp
     <br />
-    <input type="hidden" name="id" id="id" value="">
+    <input type="hidden" name="id" id="id" value="{{$sed}}">
     <div class="form-group required">
     <label class="control-label" for="accused">Name of Accused</label>
     <input type="text" class="form-control" name="accused" id="accused" placeholder="Name" required="required">
     </div>
     
-    <input type="hidden" class="form-control" name="complainant" id="complainant" placeholder="Name" required="required">
+    <input type="hidden" class="form-control" name="complainant" id="complainant" placeholder="Name" required="required" value="{{ Auth::user()->name }}">
     
     <div class="form-group required">
     <label class="control-label" for="caseofincident">Cause of Incident</label>
@@ -96,13 +99,14 @@
     </div>
     <div class="form-group required">
     <label class="control-label" for="accused">Contact Number</label>
-    <input type="text" class="form-control" name="contact" id="contact" placeholder="Your Contact Number" required="required">
+    <input type="text" class="form-control" name="contactnum" id="contactnum" placeholder="Your Contact Number" required="required">
     </div>
     <br />
     <button type="submit" class="btn btn-primary pull-right">Submit</button>
     <br />
     <br />
     </div>
+  </form>
     </div>
     </div>
 </div>

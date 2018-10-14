@@ -15,8 +15,9 @@ class CreateBlotter extends Migration
     {
         Schema::create('create_blotters', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('controlno');
-            $table->string('accused');
+            $table->string('controlno')->nullable();
+            $table->string('accused')->nullable();
+            $table->string('contactnum')->nullable();
             $table->string('complainant');
             $table->string('datetime');
             $table->string('caseofincident');

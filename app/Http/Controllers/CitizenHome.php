@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Feedback;
+use App\CreateBlotter;
 
 class CitizenHome extends Controller
 {
@@ -18,15 +19,14 @@ class CitizenHome extends Controller
             'concerntitle' => 'required|string|max:255',
             'concerndetail' => 'required|string|max:255',
             'contactnum' => 'required|string|max:255',
-            
-
         ]);
     }
    public function index()
    {
    	toastr()->success('Successfully Logged In!');
    	$cid = Feedback::count('id');
-   	return view('citizen.citizenhome',compact('cid'));
+    $bid = CreateBlotter::count('id');
+   	return view('citizen.citizenhome',compact('cid','bid'));
    }
    public function sendFeedback(Request $request)
    {
@@ -39,5 +39,22 @@ class CitizenHome extends Controller
 ]);
    	toastr()->success('Success!');
    	return back();
+   }
+
+   public function blottercreate(Request $request)
+   {
+    CreateBlotter::create([
+  'id' => $request['id'],
+  'controlno' => $request['controlno'],
+  'accused' => $request['accused'],
+  'complainant' => $request['complainant'],
+  'contactnum' => $request['contactnum'],
+  'caseofincident' => $request['caseofincident'],
+  'datetime' => $request['datetime'],
+  'detail' => $request['detail'],
+  'status' => $request['status'],
+]);
+    toastr()->success('Success!');
+    return back();
    }
 }
