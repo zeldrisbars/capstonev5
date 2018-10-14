@@ -43,6 +43,13 @@
             <br />
             <label>E-Mail</label>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Auth::user()->email }}</p>
+            <br />
+            <label>Age</label>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Auth::user()->age }}</p>
+            <br />
+            <label>Sitio</label>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ Auth::user()->sitio }}</p>
+            
             </div>
         </div>
     </div>
@@ -71,7 +78,7 @@
     <input type="text" class="form-control" name="accused" id="accused" placeholder="Name" required="required">
     </div>
     
-    <input type="hidden" class="form-control" name="complainant" id="complainant" placeholder="Name" required="required" value="{{ Auth::user()->name }}">
+    <input type="hidden" class="form-control" name="complainant" id="complainant" placeholder="Name" required="required" value="{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}">
     
     <div class="form-group required">
     <label class="control-label" for="caseofincident">Cause of Incident</label>
