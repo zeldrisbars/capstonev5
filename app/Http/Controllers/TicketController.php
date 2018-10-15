@@ -20,7 +20,9 @@ class TicketController extends Controller
      protected function validator(array $request)
     {
         return Validator::make($request, [
-            'name' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'firstname' => 'required|string|max:255',
+            'middlename' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'username' => 'required|string|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
@@ -46,7 +48,9 @@ class TicketController extends Controller
         	User::create([
             'id' => $request['id'],
             'email' => $request['email'],
-            'name' => $request['name'],
+            'lastname' => $request['lastname'],
+            'firstname' => $request['firstname'],
+            'middlename' => $request['middlename'],
             'username' => $request['username'],
             'password' => Hash::make($request['password']),
             'role' => $request['role'],
@@ -61,7 +65,7 @@ class TicketController extends Controller
         $ticket->update([
             'id' => $request['id'],
             'email' => $request['email'],
-            'name' => $request['name'],
+            'lastname' => $request['name'],
             'username' => $request['username'],
             'password' => Hash::make($request['password']),
             'role' => $request['role'],  
@@ -80,7 +84,7 @@ class TicketController extends Controller
         $ticket->delete([
             'id' => $request['id'],
             'email' => $request['email'],
-            'name' => $request['name'],
+            'lastname' => $request['name'],
             'username' => $request['username'],
             'password' => Hash::make($request['password']),
             'role' => $request['role'],

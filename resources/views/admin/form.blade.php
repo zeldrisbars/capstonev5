@@ -3,10 +3,19 @@
                   <label for="id">User #</label>
                   <input type="text" class="form-control" placeholder="User Number" name="id" id="id">
                 </div>
-
         <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" placeholder="Enter your Name" name="name" id="name">
+        <label for="name">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your Name" name="lastname" id="lastname">
+                </div>
+
+                <div class="form-group">
+                  <label for="name">First Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your Name" name="firstname" id="firstname">
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Middle Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your Name" name="middlename" id="middlename">
                 </div>
 
         <div class="form-group">

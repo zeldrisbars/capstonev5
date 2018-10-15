@@ -53,7 +53,7 @@
           <td>{{$tic->username}}</td>
           <td>{{$tic->role}}</td>
           <td>
-          <button type="button" class="btn btn-warning" data-myid="{{$tic->id}}" data-myname="{{$tic->name}}" data-myemail="{{$tic->email}}"data-myusername="{{$tic->username}}" data-mypassword="{{$tic->password}}" data-myrole="{{$tic->role}}" data-edit_id="{{$tic->id}}" data-toggle="modal" data-target="#editModal">Edit</button>
+          <button type="button" class="btn btn-warning" data-myid="{{$tic->id}}" data-myname="{{$tic->lastname}}" data-myfname="{{$tic->firstname}}" data-mymname="{{$tic->middlename}}" data-myemail="{{$tic->email}}"data-myusername="{{$tic->username}}" data-mypassword="{{$tic->password}}" data-myrole="{{$tic->role}}" data-edit_id="{{$tic->id}}" data-toggle="modal" data-target="#editModal">Edit</button>
           &nbsp
           <button type="button" class="btn btn-danger" data-edit_id="{{$tic->id}}" data-toggle="modal" data-target="#deleteModal">Remove</button>
           </td>
@@ -92,8 +92,18 @@
                 </div>
 
         <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" placeholder="Enter your Name" name="name" id="name">
+                  <label for="name">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your Name" name="lastname" id="lastname">
+                </div>
+
+                <div class="form-group">
+                  <label for="name">First Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your Name" name="firstname" id="firstname">
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Middle Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your Name" name="middlename" id="middlename">
                 </div>
 
                 <div class="form-group">
@@ -197,8 +207,6 @@
 </div>
 </div>
 </div>
-</div>
-
 &nbsp
 
 @stop
