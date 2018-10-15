@@ -186,7 +186,7 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
 <header class="masthead text-white text-right" id="announcements">
       <div class="container text-right">
           <div class="col-md-12 mx-auto">
-            <h1>Announcements |</h1>
+            <h1 style="color:white;">Announcements |</h1>
           </div>
           <div class="col-md-12">
           <h3>News and Information</h3>
@@ -196,7 +196,7 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
 </div>
 
 @foreach($announcements as $an)
-<section class="testimonials" style="background-color: green;" >
+<section class="testimonials" style="background-color: darkgreen;" >
   <div class="container" style="text-align: start">
     <div class="row">
     <div class="col-lg-4">
