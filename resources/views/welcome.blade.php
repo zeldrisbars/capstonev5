@@ -58,6 +58,7 @@ background-color: orange;
   -webkit-box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
 -moz-box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
 box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
+padding: 0;
 }
 .navbar-toggler
 {
@@ -78,7 +79,7 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top animated fadeIn" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <img src="{{ asset('images/Guyong Logo 3.png') }}" height="50px" width="50px">
+          <img src="{{ asset('images/Guyong Logo 3.png') }}" height="45px" width="45px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="">
           <span class="fa fa-bars"></span>
@@ -89,16 +90,13 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
         <a class="nav-link js-scroll-trigger" href="#home">Home</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="#announcements">Announcements</a>
-        </li>
-        <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="#contacts">Contacts</a>
         </li>
         <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="nav-item">
-        <a class="btn btn-flat btn-warning" href="{{ route('login') }}">Sign In</a>
+        <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Sign In</a>
         </li>
         </ul>
       </div>
@@ -108,33 +106,22 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
       <div id="home">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    @foreach($announcements as $an)
+    <li data-target="#carouselExampleIndicators" data-slide-to="{{$loop->index}}" class="{{$loop->first ? 'active':''}}"></li>
+    @endforeach
   </ol>
-  <div class="carousel-inner" style="min-height: 340px; max-height: 700px;">
-    <div class="carousel-item active" style="min-height: 320px; max-height: 680px;">
-      <img class="d-block w-100" src="{{ asset('images/Guyong BFinal.png') }}" alt="First slide">
+  <div class="carousel-inner" role="listbox" style="min-height: 340px; max-height: 700px;">
+    @foreach($announcements as $an)
+    <div class="carousel-item {{$loop->first ? 'active':''}}" style="min-height: 320px; max-height: 600px; background-position: inherit;">
+      <img class="d-block w-100" src="{{$an->image}}" alt="{{$an->title}}">
     <div class="carousel-caption d-none d-md-block">
-    <h3>Welcome to Barangay Guyong!</h3>
-    <p>We here to inform the happenings!</p>
+    <h3>{{$an->title}}</h3>
+    <p>{!!$an->description!!}</p>
   </div>
     </div>
-    <div class="carousel-item" style="min-height: 320px; max-height: 680px;">
-      <img class="d-block w-100" src="{{ asset('images/Guyong BG2.png') }}" alt="Second slide">
-    <div class="carousel-caption d-none d-md-block">
-    <h3>Read the requirements that you need!</h3>
-    <p>Before you going to the Barangay Hall!</p>
+  @endforeach  
   </div>
-    </div>
-    <div class="carousel-item" style="min-height: 320px; max-height: 680px;">
-      <img class="d-block w-100" src="{{ asset('images/Guyong BG2.png') }}" alt="Third slide">
-    <div class="carousel-caption d-none d-md-block">
-    <h3>Announcements will be see here!</h3>
-    <p>You can read it online!</p>
-  </div>
-    </div>
-  </div>
+  
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -182,38 +169,10 @@ box-shadow: 7px 10px 17px -2px rgba(0,0,0,0.47);
     </section>
 --->
 
-<div class="parallax bgimg2 animated slideInRight">
-<header class="masthead text-white text-right" id="announcements">
-      <div class="container text-right">
-          <div class="col-md-12 mx-auto">
-            <h1 style="color:white;">Announcements |</h1>
-          </div>
-          <div class="col-md-12">
-          <h3>News and Information</h3>
-          </div>
-      </div>
-    </header>
-</div>
 
-@foreach($announcements as $an)
-<section class="testimonials" style="background-color: darkgreen;" >
-  <div class="container" style="text-align: start">
-    <div class="row">
-    <div class="col-lg-4">
-    </div>
-  <div class="col-lg-8">
-  <h2 style="color: white;">{{$an->title}}</h2>
-  <h6 style="color: white;">Posted: {{$an->created_at}}</h6>
-  <br />
-<h5 style="color: white;">
-{!!$an->description!!}
-</h5>
-</div>
-  </div>
-  </div>
-</section>
+
 <div class="parallax bgimgsm"><br /></div>
-@endforeach
+
 
 <section id="contacts" class="testimonials animated slideInLeft">
   <div class="container" style="text-align: start;">

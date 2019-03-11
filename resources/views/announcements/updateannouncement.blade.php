@@ -19,7 +19,7 @@
 			<div class="box-header bg-orange">
 			<div class="box-title">Create Announcements</div>
 		</div>
-		<form action="{{route('updateannouncements.store')}}" method="post">
+		<form action="{{route('updateannouncements.store')}}" method="post" files="true" enctype="multipart/form-data">
 			{{csrf_field()}}
 			@php
 			$no = $id;
@@ -51,6 +51,13 @@
 	</div>
 	</div>
 	<!--row -->
+	<div class="row">
+	<div class="col-md-12">
+	<label>Image</label>
+	<img class="img-responsive pull-right" id="pic" src="{{ asset('images/steve.jpg')}}" width="800px" style="max-width:200px; background-size: contain"><input type="file" name="image" class="form-control-file" onChange="readURL(this)" id="exampleInputFile" aria-describedBy="fileHelp">
+	</div>
+	</div>
+	<!--row-->
 	</div>
 </div>
 	<div class="box-footer">
